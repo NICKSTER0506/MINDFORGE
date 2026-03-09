@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator, Platform } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator, Alert, Platform } from 'react-native';
 import { theme } from '../components/Theme';
 import { AuthContext } from '../context/AuthContext';
+import { API_BASE_URL } from '../config/api';
 
 export default function LoginScreen({ navigation }) {
     const { login } = useContext(AuthContext);
@@ -14,8 +15,7 @@ export default function LoginScreen({ navigation }) {
     const handleAuth = async () => {
         setLoading(true);
         try {
-            const baseUrl = Platform.OS === 'web' ? 'http://localhost:5000' : 'http://192.168.1.37:5000';
-            const url = `${baseUrl}/api/auth/${isRegistering ? 'register' : 'login'}`;
+            const url = `${API_BASE_URL}/api/auth/${isRegistering ? 'register' : 'login'}`;
             const body = isRegistering
                 ? { username, email, password }
                 : { email, password };

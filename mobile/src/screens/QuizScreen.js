@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated, Platform } from 'react-native';
 import { theme } from '../components/Theme';
 import { AuthContext } from '../context/AuthContext';
+import { API_BASE_URL } from '../config/api';
 import * as Haptics from 'expo-haptics';
 import { Audio } from 'expo-av';
 
@@ -38,8 +39,7 @@ export default function QuizScreen({ route, navigation }) {
 
     const fetchQuestions = async () => {
         try {
-            const baseUrl = Platform.OS === 'web' ? 'http://localhost:5000' : 'http://192.168.1.37:5000';
-            const res = await fetch(`${baseUrl}/api/quiz/${topic}`, {
+            const res = await fetch(`${API_BASE_URL}/api/quiz/${topic}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const data = await res.json();
@@ -133,8 +133,7 @@ export default function QuizScreen({ route, navigation }) {
 
     const finishQuiz = async () => {
         try {
-            const baseUrl = Platform.OS === 'web' ? 'http://localhost:5000' : 'http://192.168.1.37:5000';
-            const res = await fetch(`${baseUrl}/api/quiz/submit`, {
+            const res = await fetch(`${API_BASE_URL}/api/quiz/submit`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

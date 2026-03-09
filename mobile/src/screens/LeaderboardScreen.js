@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
 import { theme } from '../components/Theme';
+import { API_BASE_URL } from '../config/api';
 
 export default function LeaderboardScreen({ navigation }) {
     const [leaderboard, setLeaderboard] = useState([]);
@@ -12,8 +13,7 @@ export default function LeaderboardScreen({ navigation }) {
 
     const fetchLeaderboard = async () => {
         try {
-            const baseUrl = Platform.OS === 'web' ? 'http://localhost:5000' : 'http://192.168.1.37:5000';
-            const res = await fetch(`${baseUrl}/api/leaderboard`);
+            const res = await fetch(`${API_BASE_URL} /api/leaderboard`);
             const data = await res.json();
             setLeaderboard(data);
         } catch (error) {
