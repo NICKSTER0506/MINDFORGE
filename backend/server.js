@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const { MongoMemoryServer } = require('mongodb-memory-server');
 
 const authRoutes = require('./routes/authRoutes');
 const quizRoutes = require('./routes/quizRoutes');
@@ -22,18 +21,20 @@ const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
     try {
-        const mongoServer = await MongoMemoryServer.create();
-        const mongoUri = mongoServer.getUri();
+        const mongoUri = process.env.MONGO_URI;
+        if (!mongoUri) {
+            console.warn("WARNING: MONGO_URI is missing from .env.");
+        }
 
         await mongoose.connect(mongoUri);
-        console.log(`In-memory MongoDB connection established at ${mongoUri}`);
+        console.log(`MongoDB connection established to Atlas cluster`);
         await require('./seed')();
 
         app.listen(PORT, () => {
             console.log(`Server running on port ${PORT}`);
         });
     } catch (err) {
-        console.error('Failed to start in-memory MongoDB:', err);
+        console.error('Failed to start MongoDB:', err);
     }
 };
 

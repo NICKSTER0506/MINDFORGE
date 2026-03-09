@@ -1,0 +1,3648 @@
+{
+  "easy": [
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does HTML stand for?",
+      "options": [
+        "HyperText Markup Language",
+        "High Text Machine Language",
+        "HyperTransfer Markup Language",
+        "HyperText Modern Language"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which symbol is used for single-line comments in Python?",
+      "options": [
+        "//",
+        "#",
+        "/*",
+        "--"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the output of print(2 ** 3) in Python?",
+      "options": [
+        "6",
+        "9",
+        "8",
+        "5"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which data type is used to store true/false values?",
+      "options": [
+        "Integer",
+        "String",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does CSS stand for?",
+      "options": [
+        "Cascading Style Sheets",
+        "Computer Style Syntax",
+        "Creative Style System",
+        "Coded Style Sheets"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is a JavaScript framework?",
+      "options": [
+        "Django",
+        "Laravel",
+        "React",
+        "Flask"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What keyword is used to declare a variable in JavaScript (modern)?",
+      "options": [
+        "var",
+        "let",
+        "dim",
+        "define"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a programming language?",
+      "options": [
+        "Python",
+        "Java",
+        "HTML",
+        "C++"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'IDE' stand for?",
+      "options": [
+        "Integrated Development Environment",
+        "Internal Debug Engine",
+        "Intelligent Design Editor",
+        "Integrated Data Engine"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which loop is guaranteed to execute at least once?",
+      "options": [
+        "for loop",
+        "while loop",
+        "do-while loop",
+        "foreach loop"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the index of the first element in an array in most programming languages?",
+      "options": [
+        "1",
+        "-1",
+        "0",
+        "2"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which Python function is used to get the length of a list?",
+      "options": [
+        "size()",
+        "count()",
+        "length()",
+        "len()"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What symbol is used for assignment in most programming languages?",
+      "options": [
+        "==",
+        "=>",
+        "=",
+        ":="
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'API' stand for?",
+      "options": [
+        "Application Programming Interface",
+        "Automated Program Installer",
+        "Application Process Index",
+        "Advanced Programming Input"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is a valid Python list?",
+      "options": [
+        "{1, 2, 3}",
+        "(1, 2, 3)",
+        "[1, 2, 3]",
+        "<1, 2, 3>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is a 'bug' in programming?",
+      "options": [
+        "A security feature",
+        "An error or flaw in the code",
+        "A type of loop",
+        "A code comment"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which tag is used to create a hyperlink in HTML?",
+      "options": [
+        "<link>",
+        "<href>",
+        "<a>",
+        "<url>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'return' statement in a function?",
+      "options": [
+        "To restart the function",
+        "To print output",
+        "To exit the program",
+        "To send a value back to the caller"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is used to store key-value pairs in Python?",
+      "options": [
+        "List",
+        "Tuple",
+        "Set",
+        "Dictionary"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'SQL' stand for?",
+      "options": [
+        "Structured Query Language",
+        "Simple Question Language",
+        "Sequential Queue Logic",
+        "System Query Layer"
+      ],
+      "correctAnswer": 0
+    }
+  ],
+  "medium": [
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the time complexity of binary search?",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(log n)",
+        "O(1)"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which principle does OOP NOT typically include?",
+      "options": [
+        "Encapsulation",
+        "Polymorphism",
+        "Compilation",
+        "Inheritance"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'Git' primarily help with?",
+      "options": [
+        "Database management",
+        "Version control",
+        "UI design",
+        "Server deployment"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which HTTP method is used to update an existing resource?",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a closure in programming?",
+      "options": [
+        "A way to close an application",
+        "A function that retains access to its outer scope",
+        "A type of loop that closes automatically",
+        "A sealed class in OOP"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does the 'async' keyword indicate in JavaScript?",
+      "options": [
+        "The function runs synchronously",
+        "The function returns a Promise",
+        "The function has no return value",
+        "The function is recursive"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which sorting algorithm has the best average-case time complexity?",
+      "options": [
+        "Bubble Sort",
+        "Selection Sort",
+        "Quick Sort",
+        "Insertion Sort"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the difference between '==' and '===' in JavaScript?",
+      "options": [
+        "No difference",
+        "'===' checks value only",
+        "'==' checks type and value",
+        "'===' checks both type and value"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which data structure uses LIFO (Last In, First Out) ordering?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Array",
+        "Linked List"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a foreign key in a relational database?",
+      "options": [
+        "A key from another country's database",
+        "A primary key of the same table",
+        "A field referencing the primary key of another table",
+        "An encrypted key"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which Python decorator is used to define a static method?",
+      "options": [
+        "@classmethod",
+        "@staticmethod",
+        "@property",
+        "@abstract"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'recursion' in programming?",
+      "options": [
+        "A loop that runs forever",
+        "A function that calls itself",
+        "A method that returns multiple values",
+        "A data structure like a tree"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of a constructor in OOP?",
+      "options": [
+        "To destroy an object",
+        "To initialize a new object",
+        "To define static methods",
+        "To inherit from another class"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following is an immutable data type in Python?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does REST stand for in web development?",
+      "options": [
+        "Remote Execution State Transfer",
+        "Representational State Transfer",
+        "Resource Establishment and Storage Technology",
+        "Relational Endpoint Service Technology"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'Big O notation' used for?",
+      "options": [
+        "Naming variables",
+        "Measuring code readability",
+        "Describing algorithm performance/complexity",
+        "Defining object orientation"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the output of [1,2,3].map(x => x * 2) in JavaScript?",
+      "options": [
+        "[1, 2, 3]",
+        "[2, 4, 6]",
+        "[3, 6, 9]",
+        "[1, 4, 9]"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does SOLID stand for in software design?",
+      "options": [
+        "A set of five OOP design principles",
+        "A database normalization standard",
+        "A Git branching strategy",
+        "A type of software testing approach"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which command initializes a new Git repository?",
+      "options": [
+        "git start",
+        "git create",
+        "git init",
+        "git new"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "In Python, what does the 'self' parameter represent in a class method?",
+      "options": [
+        "The parent class",
+        "The current instance of the class",
+        "A static reference",
+        "The return value"
+      ],
+      "correctAnswer": 1
+    }
+  ],
+  "hard": [
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+      "options": [
+        "[1, 2, 3]",
+        "[1, 2, 3, 4]",
+        "Error",
+        "[4, 1, 2, 3]"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "Which design pattern ensures only one instance of a class exists?",
+      "options": [
+        "Factory",
+        "Observer",
+        "Singleton",
+        "Decorator"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the space complexity of merge sort?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In JavaScript, what is the result of typeof null?",
+      "options": [
+        "'null'",
+        "'undefined'",
+        "'object'",
+        "'boolean'"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What does the CAP theorem state about distributed systems?",
+      "options": [
+        "You can have Consistency, Availability, and Partition tolerance all at once",
+        "You can only guarantee two of: Consistency, Availability, Partition tolerance",
+        "Consistency is always prioritized over Availability",
+        "Partition tolerance is optional in modern systems"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes a deadlock in concurrent programming?",
+      "options": [
+        "A process that loops infinitely",
+        "Two or more processes waiting on each other indefinitely",
+        "A thread that terminates unexpectedly",
+        "A memory leak in a multi-threaded program"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is tail call optimization?",
+      "options": [
+        "Removing unused variables at the end of functions",
+        "Reusing the current stack frame for a recursive call in tail position",
+        "Optimizing the last SQL query in a transaction",
+        "Caching the last result of a pure function"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In a B-tree of order m, what is the maximum number of keys a node can hold?",
+      "options": [
+        "m",
+        "m - 1",
+        "m + 1",
+        "2m"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the primary difference between a process and a thread?",
+      "options": [
+        "Threads have their own memory space; processes share memory",
+        "Processes have their own memory space; threads share memory within a process",
+        "Threads are slower than processes",
+        "Processes cannot communicate with each other"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "Which of the following best describes 'eventual consistency' in distributed databases?",
+      "options": [
+        "All nodes are always in sync",
+        "Reads always return the latest write",
+        "Given enough time with no new updates, all nodes will converge to the same value",
+        "Only one node handles writes at a time"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}
+{
+  "easy": [
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is used to write a comment in JavaScript?",
+      "options": [
+        "# comment",
+        "<!-- comment -->",
+        "// comment",
+        "** comment"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the 'print()' function do in Python?",
+      "options": [
+        "Saves output to a file",
+        "Displays output to the console",
+        "Sends data to a printer",
+        "Creates a new variable"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is a valid variable name in most programming languages?",
+      "options": [
+        "2myVar",
+        "my-var",
+        "my_var",
+        "my var"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'if' statement?",
+      "options": [
+        "To repeat a block of code",
+        "To define a function",
+        "To execute code conditionally",
+        "To import a module"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which file extension is used for Python source files?",
+      "options": [
+        ".java",
+        ".py",
+        ".js",
+        ".cpp"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the correct way to declare a function in JavaScript?",
+      "options": [
+        "func myFunction()",
+        "def myFunction():",
+        "function myFunction() {}",
+        "void myFunction()"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which operator is used for string concatenation in Python?",
+      "options": [
+        "&",
+        ".",
+        "+",
+        "*"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'RAM' stand for in computing?",
+      "options": [
+        "Random Access Memory",
+        "Read and Modify",
+        "Rapid Application Memory",
+        "Runtime Allocation Module"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which HTML tag is used to display an image?",
+      "options": [
+        "<image>",
+        "<src>",
+        "<img>",
+        "<pic>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the modulo operator (%) return?",
+      "options": [
+        "The quotient of division",
+        "The percentage of a number",
+        "The remainder of division",
+        "The absolute value"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is a backend programming language?",
+      "options": [
+        "HTML",
+        "CSS",
+        "Python",
+        "Markdown"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is an 'algorithm'?",
+      "options": [
+        "A type of database",
+        "A step-by-step procedure to solve a problem",
+        "A programming language",
+        "A type of hardware"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What keyword is used to define a function in Python?",
+      "options": [
+        "func",
+        "function",
+        "define",
+        "def"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the Boolean result of (5 > 3) in most languages?",
+      "options": [
+        "False",
+        "True",
+        "0",
+        "None"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which CSS property changes the text color?",
+      "options": [
+        "font-color",
+        "text-color",
+        "color",
+        "foreground"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the purpose of a 'loop' in programming?",
+      "options": [
+        "To stop the program",
+        "To define variables",
+        "To repeat a block of code",
+        "To import libraries"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of these is an example of an integer value?",
+      "options": [
+        "3.14",
+        "\"hello\"",
+        "True",
+        "42"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does URL stand for?",
+      "options": [
+        "Uniform Resource Locator",
+        "Universal Runtime Language",
+        "User Request Layer",
+        "Unique Reference Link"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which symbol is used to access an object's property in JavaScript?",
+      "options": [
+        "->",
+        "::",
+        ".",
+        "#"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What type of error occurs when code breaks a syntax rule?",
+      "options": [
+        "Logic Error",
+        "Runtime Error",
+        "Syntax Error",
+        "Type Error"
+      ],
+      "correctAnswer": 2
+    }
+  ],
+  "medium": [
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of the 'finally' block in exception handling?",
+      "options": [
+        "It runs only when an exception occurs",
+        "It runs only when no exception occurs",
+        "It always runs regardless of whether an exception occurred",
+        "It catches all exceptions"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'polymorphism' in OOP?",
+      "options": [
+        "A class inheriting from multiple parents",
+        "The ability of different objects to respond to the same interface",
+        "Hiding internal implementation details",
+        "Creating multiple instances of a class"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which HTTP status code represents 'Not Found'?",
+      "options": [
+        "200",
+        "301",
+        "403",
+        "404"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a 'linked list'?",
+      "options": [
+        "A list stored in a SQL table",
+        "A linear data structure where elements point to the next node",
+        "A Python list with hyperlinks",
+        "A sorted array"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following best describes 'encapsulation'?",
+      "options": [
+        "Running multiple threads simultaneously",
+        "Bundling data and methods that operate on it within a class",
+        "One class extending another",
+        "Writing functions that call themselves"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the output of bool('') in Python?",
+      "options": [
+        "True",
+        "False",
+        "None",
+        "Error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "In relational databases, what does normalization achieve?",
+      "options": [
+        "Faster read speeds always",
+        "Reducing data redundancy and improving integrity",
+        "Encrypting sensitive fields",
+        "Merging multiple databases"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a 'race condition'?",
+      "options": [
+        "An algorithm optimization technique",
+        "When two threads access shared data simultaneously causing unpredictable results",
+        "A fast-executing loop",
+        "A type of binary search"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes a 'stack overflow' error?",
+      "options": [
+        "Running out of heap memory",
+        "Exceeding the maximum call stack size, often due to infinite recursion",
+        "Writing past the end of an array",
+        "Accessing a null pointer"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does the 'spread operator' (...) do in JavaScript?",
+      "options": [
+        "Deletes array elements",
+        "Expands an iterable into individual elements",
+        "Merges two objects by reference only",
+        "Converts a string to an array"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'memoization'?",
+      "options": [
+        "Writing documentation for functions",
+        "Caching the results of expensive function calls",
+        "A type of memory leak",
+        "Storing variables in RAM"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following is true about a binary search tree (BST)?",
+      "options": [
+        "All nodes have exactly two children",
+        "Left child values are greater than the parent",
+        "Right child values are less than the parent",
+        "Left child values are less than the parent"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'DRY' stand for in software development?",
+      "options": [
+        "Dynamic Rendering Yield",
+        "Don't Repeat Yourself",
+        "Data Redundancy Yield",
+        "Declarative Runtime Yield"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the primary use of Docker in software development?",
+      "options": [
+        "Version control",
+        "UI prototyping",
+        "Containerizing applications for consistent environments",
+        "Database administration"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'MVC' stand for in software architecture?",
+      "options": [
+        "Module View Connector",
+        "Model View Controller",
+        "Managed Variable Cache",
+        "Multi Value Component"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following is a characteristic of a 'pure function'?",
+      "options": [
+        "It modifies global variables",
+        "It always produces the same output for the same input with no side effects",
+        "It uses recursion",
+        "It must return void"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the result of 0.1 + 0.2 === 0.3 in JavaScript?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which command is used to stage all changes in Git?",
+      "options": [
+        "git commit -a",
+        "git push",
+        "git add .",
+        "git stage --all"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'abstraction' in OOP?",
+      "options": [
+        "Combining data and behavior into a single unit",
+        "Hiding complex implementation details and exposing only essentials",
+        "Allowing a class to inherit from multiple parents",
+        "Creating multiple objects from one class"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does a 'hash function' do?",
+      "options": [
+        "Encrypts data with a private key",
+        "Maps input data to a fixed-size output value",
+        "Sorts an array in place",
+        "Compresses a file"
+      ],
+      "correctAnswer": 1
+    }
+  ],
+  "hard": [
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the output of the following JavaScript code?\nconsole.log([] + []);",
+      "options": [
+        "[]",
+        "0",
+        "\"\"",
+        "null"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes the 'Liskov Substitution Principle'?",
+      "options": [
+        "A class should have only one reason to change",
+        "Objects of a subclass should be replaceable for objects of the superclass without altering correctness",
+        "A class should depend on abstractions, not concretions",
+        "Software entities should be open for extension but closed for modification"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the worst-case time complexity of quicksort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In Python, what is the difference between __str__ and __repr__?",
+      "options": [
+        "They are identical in behavior",
+        "__str__ is for developers; __repr__ is for end users",
+        "__str__ is for readable end-user output; __repr__ is for unambiguous developer representation",
+        "__repr__ only works in the REPL"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What problem does the 'Observer' design pattern solve?",
+      "options": [
+        "Managing object creation",
+        "Allowing incompatible interfaces to work together",
+        "Notifying multiple objects when another object's state changes",
+        "Restricting instantiation to one object"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'hoisting' in JavaScript?",
+      "options": [
+        "Moving scripts to the top of the HTML file",
+        "The behavior where variable and function declarations are moved to the top of their scope before execution",
+        "Optimizing loops by unrolling them",
+        "Asynchronously loading JavaScript modules"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is a 'memory leak' in programming?",
+      "options": [
+        "Sensitive data being exposed in memory",
+        "Memory that is allocated but never released, causing gradual resource exhaustion",
+        "Overwriting protected memory regions",
+        "Reading uninitialized memory values"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In database indexing, what is a 'covering index'?",
+      "options": [
+        "An index that spans all tables in a schema",
+        "An index that includes all columns needed by a query, avoiding a table lookup",
+        "An index that encrypts column data",
+        "An index automatically created for foreign keys"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What does the GIL (Global Interpreter Lock) in CPython prevent?",
+      "options": [
+        "Multiple processes from running simultaneously",
+        "Multiple native threads from executing Python bytecodes simultaneously",
+        "Importing of external C libraries",
+        "Dynamic typing in Python"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes 'dynamic programming'?",
+      "options": [
+        "Writing code that modifies itself at runtime",
+        "A technique that solves complex problems by breaking them into overlapping subproblems and caching results",
+        "A programming paradigm based on logic rules",
+        "An approach to writing type-safe code dynamically"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}
+{
+  "easy": [
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is used to store multiple values in a single variable in Java?",
+      "options": [
+        "Object",
+        "Array",
+        "Method",
+        "Class"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'int' represent in most programming languages?",
+      "options": [
+        "A text value",
+        "An integer (whole number)",
+        "A decimal number",
+        "A boolean value"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to end a statement in JavaScript?",
+      "options": [
+        ".",
+        ":",
+        ";",
+        ","
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the main purpose of version control systems?",
+      "options": [
+        "To speed up code execution",
+        "To track and manage changes to code over time",
+        "To compile code automatically",
+        "To style source code"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which Python method removes whitespace from the beginning and end of a string?",
+      "options": [
+        "strip()",
+        "trim()",
+        "clean()",
+        "remove()"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the acronym 'OOP' stand for?",
+      "options": [
+        "Object-Oriented Programming",
+        "Open Operation Protocol",
+        "Ordered Object Parsing",
+        "Optional Output Parameter"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which tag defines the largest heading in HTML?",
+      "options": [
+        "<h6>",
+        "<header>",
+        "<h1>",
+        "<heading>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following converts a string to an integer in Python?",
+      "options": [
+        "str()",
+        "float()",
+        "int()",
+        "parse()"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What character is used to access items in a Python list by position?",
+      "options": [
+        "()",
+        "{}",
+        "<>",
+        "[]"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the result of 10 // 3 in Python?",
+      "options": [
+        "3.33",
+        "1",
+        "3",
+        "0"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does a 'compiler' do?",
+      "options": [
+        "Runs code line by line",
+        "Manages database queries",
+        "Translates source code into machine code",
+        "Styles the user interface"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of these is an open-source relational database?",
+      "options": [
+        "MongoDB",
+        "Redis",
+        "MySQL",
+        "Cassandra"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "In programming, what is a 'string'?",
+      "options": [
+        "A sequence of characters",
+        "A whole number",
+        "A list of integers",
+        "A boolean value"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which keyword is used to create a class in Python?",
+      "options": [
+        "object",
+        "define",
+        "struct",
+        "class"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the 'break' statement do in a loop?",
+      "options": [
+        "Skips the current iteration",
+        "Pauses execution temporarily",
+        "Exits the loop immediately",
+        "Restarts the loop"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a valid JavaScript data type?",
+      "options": [
+        "undefined",
+        "symbol",
+        "character",
+        "bigint"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does pip stand for in Python?",
+      "options": [
+        "Python Interface Package",
+        "Pip Installs Packages",
+        "Python Import Protocol",
+        "Package Index Program"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which CSS property is used to change the background color of an element?",
+      "options": [
+        "color",
+        "fill",
+        "background-color",
+        "bg"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'else' clause in an if-statement?",
+      "options": [
+        "To check another condition",
+        "To execute code when the if condition is false",
+        "To end the program",
+        "To create a loop"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is a NoSQL database?",
+      "options": [
+        "PostgreSQL",
+        "SQLite",
+        "MongoDB",
+        "Oracle"
+      ],
+      "correctAnswer": 2
+    }
+  ],
+  "medium": [
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the difference between 'deep copy' and 'shallow copy'?",
+      "options": [
+        "They are identical in behavior",
+        "Shallow copy duplicates only references; deep copy duplicates the actual objects recursively",
+        "Deep copy only works on primitive types",
+        "Shallow copy creates a new object with all nested objects also copied"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'event bubbling' in JavaScript?",
+      "options": [
+        "Async events queued in a loop",
+        "When an event triggered on a child element propagates up to parent elements",
+        "A method to create custom DOM events",
+        "When multiple events fire simultaneously"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which data structure is best suited for implementing a breadth-first search (BFS)?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Heap",
+        "Graph"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'lazy evaluation' in programming?",
+      "options": [
+        "Skipping error handling to save time",
+        "Delaying computation of a value until it is actually needed",
+        "Caching results of all function calls",
+        "Writing fewer lines of code"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of an 'interface' in Java or TypeScript?",
+      "options": [
+        "To create instances of objects",
+        "To define a contract that classes must implement",
+        "To store key-value data",
+        "To handle exceptions"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does CORS stand for in web development?",
+      "options": [
+        "Cross-Origin Resource Sharing",
+        "Client Object Rendering System",
+        "Cached Origin Request Service",
+        "Cross-Object Referencing Standard"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which Python construct is used for 'list comprehension'?",
+      "options": [
+        "{x for x in list}",
+        "(x for x in list)",
+        "[x for x in list]",
+        "<x for x in list>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of 'indexing' in a database?",
+      "options": [
+        "To enforce data types on columns",
+        "To speed up data retrieval operations",
+        "To encrypt stored records",
+        "To link two tables together"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'method overloading'?",
+      "options": [
+        "A subclass overriding a parent method",
+        "Defining multiple methods with the same name but different parameters",
+        "Calling a method recursively",
+        "Implementing an interface method"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "In JavaScript, what does the Promise.all() method do?",
+      "options": [
+        "Runs promises sequentially",
+        "Resolves when all promises resolve, or rejects if any rejects",
+        "Waits for the first promise to resolve",
+        "Cancels all running promises"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which design pattern provides a simplified interface to a complex subsystem?",
+      "options": [
+        "Adapter",
+        "Proxy",
+        "Facade",
+        "Bridge"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'type inference' in programming languages?",
+      "options": [
+        "Manually declaring the type of every variable",
+        "The compiler automatically deducing variable types from context",
+        "Casting one type to another explicitly",
+        "Enforcing strict type rules at runtime"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the time complexity of accessing an element by index in an array?",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(n²)",
+        "O(1)"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which SQL clause is used to filter groups after a GROUP BY?",
+      "options": [
+        "WHERE",
+        "FILTER",
+        "HAVING",
+        "LIMIT"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a 'higher-order function'?",
+      "options": [
+        "A function with more than 10 parameters",
+        "A function that takes other functions as arguments or returns them",
+        "A function that runs asynchronously",
+        "A function defined inside a class"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does JWT stand for in authentication?",
+      "options": [
+        "Java Web Transfer",
+        "JSON Web Token",
+        "JavaScript Workflow Toolkit",
+        "Joint Web Transaction"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'npm' stand for?",
+      "options": [
+        "New Package Manager",
+        "Node Package Manager",
+        "Native Program Module",
+        "Network Protocol Module"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following best describes 'continuous integration' (CI)?",
+      "options": [
+        "Deploying code only once a month",
+        "Automatically building and testing code whenever changes are pushed",
+        "Writing integration tests manually",
+        "Merging all branches at the end of a sprint"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'function currying'?",
+      "options": [
+        "Calling multiple functions in a loop",
+        "Transforming a function with multiple arguments into a sequence of single-argument functions",
+        "Adding error handling to functions",
+        "Memoizing a function's output"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following is true about 'abstract classes' in OOP?",
+      "options": [
+        "They can be instantiated directly",
+        "They must contain only static methods",
+        "They cannot be instantiated and may contain abstract methods",
+        "They are identical to interfaces"
+      ],
+      "correctAnswer": 2
+    }
+  ],
+  "hard": [
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?\ndef f(x, lst=[]):\n    lst.append(x)\n    return lst\nprint(f(1))\nprint(f(2))",
+      "options": [
+        "[1] then [2]",
+        "[1] then [1, 2]",
+        "[1, 2] then [1, 2]",
+        "Error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In the context of garbage collection, what is a 'reference cycle'?",
+      "options": [
+        "A loop that iterates over references",
+        "When two or more objects reference each other, preventing standard reference counting from freeing them",
+        "A circular linked list structure",
+        "A memory optimization pattern"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'structural subtyping' (duck typing) as opposed to 'nominal subtyping'?",
+      "options": [
+        "Type compatibility is determined by explicit inheritance declarations",
+        "Type compatibility is based on the structure or capabilities of a type, not its declared name",
+        "All types are treated as identical at runtime",
+        "Types are checked only at compile time"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What problem does the 'Two Generals Problem' illustrate in distributed systems?",
+      "options": [
+        "The impossibility of leader election in async networks",
+        "The impossibility of achieving guaranteed consensus over an unreliable channel",
+        "The challenge of consistent hashing in distributed databases",
+        "Deadlock prevention between distributed processes"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the key distinction between a 'coroutine' and a regular function?",
+      "options": [
+        "Coroutines always run on separate threads",
+        "Coroutines can pause and resume execution, yielding control back to the caller",
+        "Coroutines cannot have return values",
+        "Coroutines are only available in Python"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What does it mean for a programming language to be 'Turing complete'?",
+      "options": [
+        "It supports object-oriented programming",
+        "It can simulate any Turing machine and thus compute any computable function",
+        "It has a built-in garbage collector",
+        "It supports both compiled and interpreted execution"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'variance' in the context of generic type systems (covariance vs contravariance)?",
+      "options": [
+        "The difference in execution speed between generic and non-generic code",
+        "How subtype relationships between complex types relate to subtype relationships of their component types",
+        "The number of type parameters a generic class can accept",
+        "Whether a generic type can be used at runtime or only at compile time"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In the Actor model of concurrency, how do actors communicate?",
+      "options": [
+        "Through shared mutable memory",
+        "By passing immutable messages to each other's mailboxes",
+        "Via semaphores and mutexes",
+        "Through direct function calls on each other's methods"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'write-ahead logging' (WAL) used for in databases?",
+      "options": [
+        "Pre-compiling frequently run queries",
+        "Ensuring durability and atomicity by logging changes before applying them to the main data files",
+        "Caching write operations for batch execution",
+        "Encrypting sensitive database writes"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What does the 'Halting Problem' prove about computation?",
+      "options": [
+        "All programs can be proven to terminate with enough resources",
+        "It is undecidable whether an arbitrary program will halt or run forever on a given input",
+        "Recursive programs always halt",
+        "Non-deterministic programs are more powerful than deterministic ones"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}
+{
+  "easy": [
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is used to include external JavaScript in an HTML file?",
+      "options": [
+        "<js src='file.js'>",
+        "<script src='file.js'>",
+        "<link href='file.js'>",
+        "<import src='file.js'>"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the correct way to create a dictionary in Python?",
+      "options": [
+        "[key: value]",
+        "(key, value)",
+        "{key: value}",
+        "<key = value>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which keyword exits a function early in most languages?",
+      "options": [
+        "stop",
+        "break",
+        "exit",
+        "return"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the 'continue' statement do inside a loop?",
+      "options": [
+        "Exits the loop",
+        "Restarts the program",
+        "Skips the rest of the current iteration and moves to the next",
+        "Pauses execution"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following best describes 'open source' software?",
+      "options": [
+        "Software that costs money to use",
+        "Software with publicly available source code",
+        "Software developed by one company only",
+        "Software that cannot be modified"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the keyboard shortcut commonly used to undo an action in most code editors?",
+      "options": [
+        "Ctrl + Z",
+        "Ctrl + U",
+        "Ctrl + X",
+        "Ctrl + Y"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the output of type(3.14) in Python?",
+      "options": [
+        "<class 'int'>",
+        "<class 'double'>",
+        "<class 'number'>",
+        "<class 'float'>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which HTML attribute is used to define inline CSS styles?",
+      "options": [
+        "class",
+        "style",
+        "css",
+        "format"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the '!' operator represent in most programming languages?",
+      "options": [
+        "Bitwise AND",
+        "Assignment",
+        "Logical NOT",
+        "Modulo"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is a correct way to write a multiline comment in Java?",
+      "options": [
+        "# This is a comment",
+        "// This is a comment",
+        "/* This is a comment */",
+        "-- This is a comment"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'localhost' refer to in web development?",
+      "options": [
+        "A remote server",
+        "The user's own computer as a server",
+        "The hosting provider's machine",
+        "A shared cloud server"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following Python methods adds an item to the end of a list?",
+      "options": [
+        "insert()",
+        "add()",
+        "push()",
+        "append()"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'HTTP' stand for?",
+      "options": [
+        "HyperText Transfer Protocol",
+        "High Transfer Text Program",
+        "HyperText Transmission Path",
+        "Hosted Text Transfer Process"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is a dynamically typed language?",
+      "options": [
+        "Java",
+        "C",
+        "Python",
+        "C++"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "In a CSS file, how do you select an element with the class 'btn'?",
+      "options": [
+        "#btn",
+        "*btn",
+        "btn",
+        ".btn"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the default value of an uninitialized integer in Java?",
+      "options": [
+        "null",
+        "undefined",
+        "0",
+        "-1"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which symbol denotes a private field by convention in Python?",
+      "options": [
+        "@",
+        "$",
+        "_",
+        "!"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'UI' stand for in software development?",
+      "options": [
+        "Unified Interface",
+        "User Interface",
+        "Universal Input",
+        "Unique Integration"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly declares a constant in JavaScript?",
+      "options": [
+        "let x = 5",
+        "var x = 5",
+        "static x = 5",
+        "const x = 5"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is 'pseudocode'?",
+      "options": [
+        "Code written in Python",
+        "A broken or buggy program",
+        "An informal, plain-language description of an algorithm",
+        "Compiled machine code"
+      ],
+      "correctAnswer": 2
+    }
+  ],
+  "medium": [
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of the 'virtual' keyword in C++?",
+      "options": [
+        "To declare a constant method",
+        "To allow a method to be overridden in derived classes via dynamic dispatch",
+        "To make a class abstract",
+        "To define a static method"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'dependency injection'?",
+      "options": [
+        "Installing project dependencies via a package manager",
+        "A pattern where dependencies are provided to a class rather than created inside it",
+        "Injecting malicious code into a program",
+        "Adding optional parameters to a function"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following best describes 'immutability' in functional programming?",
+      "options": [
+        "Variables must be declared with const",
+        "Once created, data cannot be changed; instead new copies are produced",
+        "Functions cannot have side effects",
+        "Objects cannot be passed to functions"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the difference between 'stack' and 'heap' memory?",
+      "options": [
+        "Stack is slower; heap is faster",
+        "Stack stores static/local data with automatic management; heap stores dynamic data managed manually or by GC",
+        "Heap is used only for arrays; stack for everything else",
+        "They are interchangeable terms"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does the 'volatile' keyword indicate in Java?",
+      "options": [
+        "The variable cannot be reassigned",
+        "The variable is shared across threads and must always be read from main memory",
+        "The variable is stored on the heap",
+        "The variable is deprecated"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "In Python, what is the difference between a 'generator' and a regular function?",
+      "options": [
+        "Generators run faster than regular functions",
+        "Generators use 'yield' to lazily produce values one at a time instead of returning all at once",
+        "Generators cannot accept parameters",
+        "Generators are only used for mathematical computations"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'semantic versioning' (SemVer)?",
+      "options": [
+        "A method to write self-documenting code",
+        "A versioning scheme using MAJOR.MINOR.PATCH to communicate change impact",
+        "A Git branching strategy",
+        "A way to tag releases alphabetically"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the main advantage of using a 'binary heap' over a sorted array for a priority queue?",
+      "options": [
+        "Binary heaps allow O(1) search",
+        "Binary heaps offer O(log n) insertion and deletion vs O(n) for sorted arrays",
+        "Binary heaps use less memory than arrays",
+        "Binary heaps allow duplicate priorities, sorted arrays do not"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does the 'this' keyword refer to inside a JavaScript class method?",
+      "options": [
+        "The global window object always",
+        "The current instance of the class",
+        "The parent class",
+        "The function itself"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'middleware' in the context of web frameworks?",
+      "options": [
+        "Software between the OS and the hardware",
+        "Functions that process requests/responses in a pipeline before reaching the final handler",
+        "The database layer of a web app",
+        "A type of CSS preprocessor"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes a 'graph' data structure?",
+      "options": [
+        "A sorted collection of key-value pairs",
+        "A hierarchical tree with exactly two children per node",
+        "A set of nodes connected by edges, which may contain cycles",
+        "A linear sequence of elements"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'serialization' mean in programming?",
+      "options": [
+        "Executing tasks one after another",
+        "Converting an object's state into a format that can be stored or transmitted",
+        "Encrypting sensitive data",
+        "Sorting data in a specific order"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "In CSS, what does the 'z-index' property control?",
+      "options": [
+        "The zoom level of an element",
+        "The horizontal position of an element",
+        "The stacking order of overlapping elements",
+        "The transparency of an element"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of the 'try-catch' block in programming?",
+      "options": [
+        "To improve performance of slow code",
+        "To handle exceptions and prevent program crashes",
+        "To run code asynchronously",
+        "To iterate over a collection"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'TTL' stand for in caching systems?",
+      "options": [
+        "Total Transfer Limit",
+        "Time To Live",
+        "Token Transfer Layer",
+        "Table Type Length"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a characteristic of functional programming?",
+      "options": [
+        "First-class functions",
+        "Immutable data",
+        "Shared mutable state",
+        "Pure functions"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is an 'abstract syntax tree' (AST)?",
+      "options": [
+        "A visualization of a program's folder structure",
+        "A tree representation of the syntactic structure of source code used by compilers",
+        "A sorted binary tree used in databases",
+        "A flowchart of program logic"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'idempotent' mean for an HTTP method?",
+      "options": [
+        "The request is encrypted",
+        "Calling the method multiple times produces the same result as calling it once",
+        "The request has no response body",
+        "The method is cached by the browser"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a 'promise chain' in JavaScript?",
+      "options": [
+        "Linking multiple synchronous functions together",
+        "A series of .then() calls where each step receives the result of the previous promise",
+        "Grouping promises into an array",
+        "A pattern for cancelling pending promises"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "In Git, what does 'git rebase' do compared to 'git merge'?",
+      "options": [
+        "They are identical in behavior",
+        "Rebase replays commits on top of another branch, creating a linear history; merge preserves branch history",
+        "Merge is always preferred over rebase",
+        "Rebase only works on local branches"
+      ],
+      "correctAnswer": 1
+    }
+  ],
+  "hard": [
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the significance of the 'happens-before' relationship in Java's memory model?",
+      "options": [
+        "It defines the order in which classes are loaded by the JVM",
+        "It guarantees that memory writes by one thread are visible to another thread in a defined order",
+        "It determines the order of garbage collection cycles",
+        "It specifies the sequence of static initializer blocks"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "Which of the following describes 'phantom reads' in database transaction isolation?",
+      "options": [
+        "Reading data that has been deleted mid-transaction",
+        "A transaction re-executing a query finds new rows that were inserted by another committed transaction",
+        "Seeing uncommitted changes from another transaction",
+        "Reading the same row twice and getting different values"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'monadic composition' in functional programming?",
+      "options": [
+        "Composing pure functions with no context",
+        "Chaining operations that return values wrapped in a context (like Maybe or IO) using bind/flatMap",
+        "Composing multiple classes through inheritance",
+        "Combining several microservices into a monolith"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In the context of compilers, what is 'register allocation'?",
+      "options": [
+        "Assigning network ports to running processes",
+        "The process of mapping program variables to a limited number of CPU registers to optimize performance",
+        "Allocating heap memory for program objects",
+        "Tracking function call stacks at runtime"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the primary purpose of a 'bloom filter'?",
+      "options": [
+        "To sort large datasets efficiently",
+        "To probabilistically test whether an element is a member of a set with possible false positives but no false negatives",
+        "To compress data for storage",
+        "To detect duplicate values in a stream with perfect accuracy"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What does 'copy-on-write' (COW) semantics mean in operating systems and data structures?",
+      "options": [
+        "Data is always duplicated when assigned to a new variable",
+        "A shared resource is copied only when a modification is made, avoiding unnecessary duplication",
+        "All writes are buffered until the program exits",
+        "Data is written to disk before being modified in memory"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In language theory, what distinguishes a 'context-free grammar' from a 'regular grammar'?",
+      "options": [
+        "Regular grammars support recursion; context-free grammars do not",
+        "Context-free grammars can describe nested and recursive structures that regular grammars cannot",
+        "Context-free grammars are parsed faster than regular grammars",
+        "Regular grammars require more memory to parse"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'software transactional memory' (STM)?",
+      "options": [
+        "Persisting transactions to an in-memory database",
+        "A concurrency control mechanism that allows groups of memory operations to execute atomically like database transactions",
+        "A cache strategy for database query results",
+        "A garbage collection algorithm for transient objects"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What distinguishes an 'epoll' from a 'select' system call in Linux I/O multiplexing?",
+      "options": [
+        "select supports more file descriptors than epoll",
+        "epoll scales in O(1) for event notification regardless of the number of monitored descriptors, while select scales in O(n)",
+        "epoll is only available on Windows; select works on Linux",
+        "select uses edge-triggering; epoll uses level-triggering exclusively"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'escape analysis' in JVM optimization?",
+      "options": [
+        "Detecting infinite loops before runtime",
+        "Determining whether an object's reference escapes a method or thread, allowing it to be stack-allocated instead of heap-allocated",
+        "Identifying memory leaks in long-running applications",
+        "Analyzing exception propagation paths in bytecode"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}
+{
+  "easy": [
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is the correct syntax to create a 'for' loop in Python?",
+      "options": [
+        "for (i = 0; i < 5; i++)",
+        "for i in range(5):",
+        "loop i from 0 to 5",
+        "foreach i in range(5)"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the 'input()' function do in Python?",
+      "options": [
+        "Prints text to the screen",
+        "Reads a value entered by the user",
+        "Imports a module",
+        "Opens a file"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of these HTML tags is used to create an unordered list?",
+      "options": [
+        "<ol>",
+        "<li>",
+        "<ul>",
+        "<list>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What value does a function return if no return statement is specified in Python?",
+      "options": [
+        "0",
+        "False",
+        "None",
+        "undefined"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which operator checks if two values are NOT equal in Python?",
+      "options": [
+        "<>",
+        "!=",
+        "~=",
+        "=/="
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the function of a 'parameter' in a function definition?",
+      "options": [
+        "It stores the return value",
+        "It is a placeholder for values passed into the function",
+        "It defines the function's data type",
+        "It ends the function execution"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which CSS property controls the spacing between elements' borders and surrounding content?",
+      "options": [
+        "spacing",
+        "padding",
+        "margin",
+        "border-gap"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'UX' stand for in software design?",
+      "options": [
+        "Unified Execution",
+        "User Experience",
+        "Universal Extension",
+        "Unique Expression"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following correctly creates an empty set in Python?",
+      "options": [
+        "{}",
+        "[]",
+        "set()",
+        "()"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is a 'float' data type used for?",
+      "options": [
+        "Storing text values",
+        "Storing whole numbers only",
+        "Storing decimal (floating point) numbers",
+        "Storing boolean values"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the acronym 'JSON' stand for?",
+      "options": [
+        "JavaScript Syntax Object Notation",
+        "Java Standard Object Naming",
+        "JavaScript Object Notation",
+        "Joint Serialized Object Network"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "In HTML, which attribute specifies where a hyperlink goes?",
+      "options": [
+        "src",
+        "link",
+        "href",
+        "url"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is used to check membership in a Python list?",
+      "options": [
+        "has",
+        "contains",
+        "in",
+        "includes"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is an 'event' in web programming?",
+      "options": [
+        "A type of database query",
+        "A scheduled server job",
+        "An action that occurs in the browser, like a click or keypress",
+        "A CSS animation trigger"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following correctly declares a boolean variable in Java?",
+      "options": [
+        "bool isActive = true;",
+        "boolean isActive = true;",
+        "Boolean isActive = True;",
+        "bit isActive = 1;"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does the 'DOM' stand for in web development?",
+      "options": [
+        "Data Object Model",
+        "Document Object Model",
+        "Dynamic Output Module",
+        "Direct Object Manager"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is 'indentation' used for in Python?",
+      "options": [
+        "To add comments",
+        "To improve performance",
+        "To define code blocks",
+        "To declare variables"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to import a module in Python?",
+      "options": [
+        "include math",
+        "require math",
+        "#include math",
+        "import math"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'CLI' stand for in computing?",
+      "options": [
+        "Code Library Interface",
+        "Command Line Interface",
+        "Computer Logic Input",
+        "Central Load Index"
+      ],
+      "correctAnswer": 1
+    }
+  ],
+  "medium": [
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'method overriding' in OOP?",
+      "options": [
+        "Defining two methods with the same name but different parameters in the same class",
+        "A subclass providing its own implementation of a method already defined in its parent class",
+        "Calling a parent method from a subclass",
+        "Preventing a method from being inherited"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of a 'mutex' in concurrent programming?",
+      "options": [
+        "To speed up thread execution",
+        "To allow multiple threads to read simultaneously",
+        "To ensure only one thread accesses a shared resource at a time",
+        "To kill idle threads automatically"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'O(1)' mean in terms of algorithmic complexity?",
+      "options": [
+        "The algorithm is always slow",
+        "The algorithm's runtime grows linearly with input",
+        "The algorithm's runtime is constant regardless of input size",
+        "The algorithm runs in zero time"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'tree shaking' in modern JavaScript bundlers?",
+      "options": [
+        "Reorganizing a project's folder structure",
+        "Removing unused code from the final bundle to reduce file size",
+        "Recursively rendering component trees",
+        "Clearing the browser's DOM tree"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the key difference between 'authorization' and 'authentication'?",
+      "options": [
+        "They are the same concept",
+        "Authentication verifies identity; authorization determines what that identity can access",
+        "Authorization verifies identity; authentication grants permissions",
+        "Authentication applies only to APIs; authorization applies to UIs"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a 'trie' data structure primarily used for?",
+      "options": [
+        "Sorting integers efficiently",
+        "Storing and searching strings or prefix-based data",
+        "Representing weighted graphs",
+        "Implementing priority queues"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does the 'Open/Closed Principle' in SOLID state?",
+      "options": [
+        "Classes should be open to inheritance only",
+        "Software entities should be open for extension but closed for modification",
+        "A class should have only one public method",
+        "Interfaces should be closed to implementation"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes 'connection pooling' in databases?",
+      "options": [
+        "Combining multiple databases into one",
+        "Reusing a set of pre-established database connections to reduce overhead",
+        "Storing query results in a shared cache",
+        "Distributing queries across multiple servers"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of 'debouncing' a function in JavaScript?",
+      "options": [
+        "To run a function multiple times in rapid succession",
+        "To delay function execution until after a specified time has passed since the last call",
+        "To execute a function before the DOM loads",
+        "To cache a function's return value"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'ACID' stand for in database transactions?",
+      "options": [
+        "Atomicity, Consistency, Isolation, Durability",
+        "Availability, Consistency, Integrity, Distribution",
+        "Atomicity, Concurrency, Indexing, Durability",
+        "Access, Control, Integrity, Data"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'prototype-based inheritance' in JavaScript?",
+      "options": [
+        "Using class syntax to inherit methods",
+        "Objects inheriting directly from other objects via a prototype chain rather than class definitions",
+        "Restricting method access using closures",
+        "Using constructor functions only for inheritance"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the role of a 'load balancer' in a web architecture?",
+      "options": [
+        "To compress static assets for delivery",
+        "To distribute incoming network traffic across multiple servers",
+        "To cache database queries",
+        "To manage SSL certificates"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'lexical scoping' in programming languages?",
+      "options": [
+        "Variables are scoped based on when they are created at runtime",
+        "A variable's scope is determined by its position in the source code at write time",
+        "All variables are globally accessible",
+        "Scope is determined by the order of function calls"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following best describes 'defensive programming'?",
+      "options": [
+        "Writing code that passes all unit tests",
+        "Writing code that anticipates and gracefully handles unexpected inputs or errors",
+        "Using private access modifiers on all fields",
+        "Avoiding the use of third-party libraries"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "In Python, what does the '@property' decorator do?",
+      "options": [
+        "Makes a method static",
+        "Allows a method to be accessed like an attribute",
+        "Marks a method as private",
+        "Caches the result of a method call"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of an 'enum' type in programming?",
+      "options": [
+        "To store a collection of mixed-type values",
+        "To define a fixed set of named constants",
+        "To create a resizable array",
+        "To enumerate items in a dictionary"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'code refactoring'?",
+      "options": [
+        "Rewriting code in a different language",
+        "Restructuring existing code without changing its external behavior to improve readability or performance",
+        "Adding new features to existing code",
+        "Removing deprecated dependencies from a project"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'CDN' stand for and what is its purpose?",
+      "options": [
+        "Central Data Node; to manage backend databases",
+        "Content Delivery Network; to serve assets from servers geographically close to users",
+        "Cached Data Network; to store session variables",
+        "Cloud Distribution Node; to manage cloud computing tasks"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'unit testing'?",
+      "options": [
+        "Testing the entire application as a whole",
+        "Testing individual components or functions in isolation",
+        "Testing the user interface visually",
+        "Testing the system under heavy traffic load"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'SSH' stand for and what is it used for?",
+      "options": [
+        "Secure Socket Handler; for managing web sockets",
+        "Secure Shell; for securely accessing remote machines over a network",
+        "System Service Host; for running background services",
+        "Synchronized Stream Handler; for streaming data"
+      ],
+      "correctAnswer": 1
+    }
+  ],
+  "hard": [
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the 'diamond problem' in multiple inheritance and how does Python resolve it?",
+      "options": [
+        "A naming conflict in interfaces resolved by using abstract classes",
+        "Ambiguity when a class inherits from two classes sharing a common ancestor; Python resolves it via the C3 linearization MRO algorithm",
+        "A circular import issue resolved by lazy loading",
+        "A deadlock scenario in threaded programs resolved by lock ordering"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'ahead-of-time (AOT) compilation' compared to 'just-in-time (JIT) compilation'?",
+      "options": [
+        "AOT compiles code during execution; JIT compiles before deployment",
+        "AOT translates code to machine code before runtime; JIT compiles code during execution for optimization",
+        "AOT is used only for scripting languages; JIT only for compiled languages",
+        "They are identical in performance characteristics"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In distributed systems, what does the 'SAGA pattern' address?",
+      "options": [
+        "Optimizing read-heavy workloads across shards",
+        "Managing long-running distributed transactions by breaking them into local transactions with compensating rollback actions",
+        "Replicating leader state to follower nodes",
+        "Batching writes to reduce network overhead"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'continuation-passing style' (CPS) in programming?",
+      "options": [
+        "A style where every function logs its execution trace",
+        "A programming style where control flow is passed explicitly as a 'continuation' callback argument instead of using return values",
+        "A method of chaining Promises in JavaScript",
+        "An approach to writing tail-recursive functions in Haskell"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'consistent hashing' and why is it used in distributed systems?",
+      "options": [
+        "A cryptographic hash used for authentication tokens",
+        "A technique that minimizes the remapping of keys when nodes are added or removed from a distributed cache or cluster",
+        "A method to ensure all hash functions return the same result",
+        "A way to shard databases using sequential integer IDs"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the difference between 'strong' and 'weak' references in memory management?",
+      "options": [
+        "Strong references are faster to dereference than weak ones",
+        "Strong references prevent garbage collection of the referenced object; weak references allow the GC to collect it even if a reference exists",
+        "Weak references are used only for primitive types",
+        "Strong references exist on the stack; weak references exist on the heap"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'algebraic data type' (ADT) in functional programming?",
+      "options": [
+        "A numeric type with extended precision for algebraic computations",
+        "A composite type formed by combining other types using sum types (variants) and product types (records)",
+        "A class hierarchy in Scala that enforces mathematical laws",
+        "A data structure that supports algebraic operations like addition and multiplication"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the purpose of 'vector clocks' in distributed systems?",
+      "options": [
+        "To synchronize wall-clock time across nodes",
+        "To track causality and partial ordering of events across distributed processes without relying on a global clock",
+        "To measure latency between distributed nodes",
+        "To schedule tasks based on priority across a cluster"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What does 'trampolining' solve in recursive programming?",
+      "options": [
+        "It speeds up tree traversal algorithms",
+        "It prevents stack overflow in deeply recursive functions by converting recursion into an iterative loop using thunks",
+        "It optimizes tail calls at the hardware level",
+        "It allows mutual recursion in languages without first-class functions"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'data-oriented design' (DOD) and how does it differ from OOP?",
+      "options": [
+        "DOD uses inheritance extensively while OOP avoids it",
+        "DOD organizes data in memory layouts optimized for CPU cache efficiency, prioritizing data transformation over object behavior encapsulation",
+        "DOD is a database design paradigm while OOP is for application logic",
+        "DOD enforces stricter type safety than OOP through dependent types"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}
+{
+  "easy": [
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to write a 'while' loop in Python?",
+      "options": [
+        "while (x < 5) {}",
+        "while x < 5:",
+        "loop while x < 5",
+        "do while x < 5:"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'import' statement in Python?",
+      "options": [
+        "To export functions to other files",
+        "To include external modules or libraries",
+        "To declare global variables",
+        "To compile the program"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which HTML element is used to define a table row?",
+      "options": [
+        "<td>",
+        "<th>",
+        "<tr>",
+        "<table-row>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the result of 'Hello' + ' ' + 'World' in Python?",
+      "options": [
+        "HelloWorld",
+        "Hello World",
+        "Error",
+        "'Hello' 'World'"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'debugging' mean in programming?",
+      "options": [
+        "Writing new features",
+        "Optimizing code speed",
+        "Finding and fixing errors in code",
+        "Compiling source code"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which CSS property sets the size of text?",
+      "options": [
+        "text-size",
+        "font-size",
+        "text-style",
+        "font-weight"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does a 'return type' of 'void' mean in Java or C?",
+      "options": [
+        "The function returns zero",
+        "The function returns an empty string",
+        "The function returns nothing",
+        "The function is abstract"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which symbol is used to select an element by ID in CSS?",
+      "options": [
+        ".",
+        "&",
+        "*",
+        "#"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the name of the file that typically contains project dependencies in a Node.js project?",
+      "options": [
+        "config.json",
+        "node.json",
+        "package.json",
+        "deps.json"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the result of bool(0) in Python?",
+      "options": [
+        "True",
+        "None",
+        "Error",
+        "False"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is used to run Python code interactively line by line?",
+      "options": [
+        "Compiler",
+        "Assembler",
+        "REPL",
+        "Linker"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the role of the '<head>' tag in HTML?",
+      "options": [
+        "Displays the page title bar text only",
+        "Contains metadata and links to stylesheets not shown on the page",
+        "Holds all visible page content",
+        "Creates the navigation menu"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'NaN' stand for in JavaScript?",
+      "options": [
+        "Null and None",
+        "Not a Node",
+        "Not a Number",
+        "New Assigned Null"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following correctly accesses the second element of a Python list called 'items'?",
+      "options": [
+        "items[2]",
+        "items(1)",
+        "items.get(2)",
+        "items[1]"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is a 'syntax error'?",
+      "options": [
+        "An error caused by wrong logic in the program",
+        "An error caused by writing code that violates the language's grammar rules",
+        "An error caused by accessing a null value",
+        "An error caused by running out of memory"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which of the following is a strongly typed language?",
+      "options": [
+        "JavaScript",
+        "Python",
+        "PHP",
+        "Java"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is the purpose of the HTML '<form>' element?",
+      "options": [
+        "To display tables",
+        "To style page content",
+        "To collect user input",
+        "To embed videos"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What does 'concatenation' mean in programming?",
+      "options": [
+        "Splitting a string into parts",
+        "Joining two or more strings together",
+        "Converting a number to a string",
+        "Reversing the characters of a string"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "Which command is used to print output in Java?",
+      "options": [
+        "print()",
+        "echo()",
+        "console.log()",
+        "System.out.println()"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "easy",
+      "question": "What is an 'instance' in object-oriented programming?",
+      "options": [
+        "A blueprint for creating objects",
+        "A specific object created from a class",
+        "A method inside a class",
+        "A static variable"
+      ],
+      "correctAnswer": 1
+    }
+  ],
+  "medium": [
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the difference between 'pass by value' and 'pass by reference'?",
+      "options": [
+        "They behave identically in all languages",
+        "Pass by value copies the value; pass by reference passes the memory address allowing modification of the original",
+        "Pass by reference copies the value; pass by value passes the address",
+        "Pass by value only works with primitives in all languages"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'throttling' in JavaScript and how does it differ from debouncing?",
+      "options": [
+        "Throttling delays execution until inactivity; debouncing limits rate to once per interval",
+        "Throttling limits function execution to at most once per time interval; debouncing delays execution until after a quiet period",
+        "They are the same technique with different names",
+        "Throttling is used for API calls only; debouncing for UI events only"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a 'foreign function interface' (FFI)?",
+      "options": [
+        "An API for calling external web services",
+        "A mechanism that allows code in one programming language to call functions written in another language",
+        "A way to import CSS into JavaScript",
+        "An interface for cross-browser JavaScript compatibility"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'eventual consistency' sacrifice compared to 'strong consistency'?",
+      "options": [
+        "Availability",
+        "Durability",
+        "Partition tolerance",
+        "Immediate read-after-write consistency"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a 'segment tree' used for?",
+      "options": [
+        "Representing hierarchical file systems",
+        "Efficiently answering range queries and range update operations on arrays",
+        "Storing key-value pairs in sorted order",
+        "Graph traversal in O(1) time"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "In JavaScript, what is the event loop responsible for?",
+      "options": [
+        "Running multiple threads concurrently",
+        "Managing DOM rendering cycles",
+        "Processing the call stack and callback queue to enable non-blocking async behavior",
+        "Garbage collecting unused variables"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of 'namespaces' in programming?",
+      "options": [
+        "To increase code performance",
+        "To organize code and prevent naming conflicts between identifiers in different scopes",
+        "To define abstract types",
+        "To manage memory allocation"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'YAGNI' stand for in software development?",
+      "options": [
+        "Your App Goes Nowhere If...",
+        "You Aren't Gonna Need It",
+        "Yet Another Generic Node Interface",
+        "Your Algorithm Gets No Improvement"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of the 'final' keyword in Java?",
+      "options": [
+        "It marks a method as abstract",
+        "It makes a class, method, or variable unchangeable or non-overridable",
+        "It ends the program execution",
+        "It declares a global variable"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'monkey patching' in programming?",
+      "options": [
+        "Writing automated tests for legacy code",
+        "Dynamically modifying or extending a class or module at runtime without altering original source code",
+        "A debugging technique for recursive functions",
+        "A pattern for mocking dependencies in unit tests"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does the SQL 'JOIN' clause do?",
+      "options": [
+        "Merges two databases together permanently",
+        "Combines rows from two or more tables based on a related column",
+        "Creates a backup of table data",
+        "Sorts results from multiple tables"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "Which of the following best describes 'technical debt'?",
+      "options": [
+        "The cost of software licenses accumulated over time",
+        "The implied cost of shortcuts or poor design choices made now that will require extra rework in the future",
+        "The number of unresolved bug tickets in a project",
+        "The difference between planned and actual development hours"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is a 'webhook'?",
+      "options": [
+        "A browser extension for inspecting HTTP traffic",
+        "A user-defined HTTP callback triggered when a specific event occurs in a third-party service",
+        "A type of API key used for authentication",
+        "A JavaScript function that hooks into the DOM lifecycle"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the difference between 'compiled' and 'interpreted' languages?",
+      "options": [
+        "Compiled languages are always faster; interpreted ones are always slower",
+        "Compiled languages translate the entire source to machine code before execution; interpreted languages execute code line by line at runtime",
+        "Interpreted languages require a separate build step; compiled ones do not",
+        "Compiled languages run only on Windows; interpreted ones run cross-platform"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'object pooling' as a design pattern?",
+      "options": [
+        "Merging multiple classes into a single object",
+        "Reusing a set of pre-instantiated objects rather than creating and destroying them on demand",
+        "Sharing methods between unrelated classes",
+        "Storing all objects in a global dictionary"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is the purpose of 'linting' in software development?",
+      "options": [
+        "Compressing assets before deployment",
+        "Statically analyzing source code to flag errors, bugs, or style violations",
+        "Running integration tests automatically",
+        "Minifying CSS and JavaScript files"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does 'HTTPS' provide over plain 'HTTP'?",
+      "options": [
+        "Faster data transmission speeds",
+        "Encrypted communication using TLS/SSL to ensure security and privacy",
+        "Persistent connections between client and server",
+        "Compression of all transmitted data"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'duck typing'?",
+      "options": [
+        "A strict type system enforced at compile time",
+        "A typing approach where an object's suitability is determined by the presence of certain methods, not its type declaration",
+        "A pattern for runtime type casting",
+        "An OOP technique for creating anonymous classes"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What does the 'Adapter' design pattern do?",
+      "options": [
+        "Adds new behavior to an existing class dynamically",
+        "Converts the interface of a class into another interface that a client expects",
+        "Creates objects without specifying their concrete class",
+        "Defines a one-to-many dependency between objects"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "medium",
+      "question": "What is 'sharding' in database architecture?",
+      "options": [
+        "Encrypting a database into secure fragments",
+        "Horizontally partitioning data across multiple database instances to improve scalability",
+        "Creating read replicas of a primary database",
+        "Splitting a monolithic database into normalized tables"
+      ],
+      "correctAnswer": 1
+    }
+  ],
+  "hard": [
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the difference between 'optimistic' and 'pessimistic' concurrency control in databases?",
+      "options": [
+        "Optimistic locks records immediately; pessimistic assumes no conflicts and checks only at commit",
+        "Optimistic assumes no conflicts and validates at commit; pessimistic locks resources upfront to prevent conflicts",
+        "They are identical strategies with different naming conventions",
+        "Pessimistic concurrency is only used in NoSQL databases"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'partial application' in functional programming and how does it differ from currying?",
+      "options": [
+        "They are identical; both fully decompose functions into unary functions",
+        "Partial application fixes some arguments of a function returning a new function with fewer args; currying transforms an n-ary function into a chain of n unary functions",
+        "Currying fixes only the first argument; partial application fixes all but one",
+        "Partial application only works on pure functions; currying works on any function"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In CPU architecture, what is 'branch prediction' and why does it matter for performance?",
+      "options": [
+        "It preloads data into L1 cache before it is needed",
+        "It is the CPU's mechanism to guess the outcome of conditional branches to keep the pipeline full, avoiding costly pipeline flushes on mispredictions",
+        "It predicts the next memory address to fetch from RAM",
+        "It schedules threads across cores to minimize context switching"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'higher-kinded types' (HKT) in type theory and which mainstream language supports them natively?",
+      "options": [
+        "Types parameterized by other parameterized types (type constructors); Scala and Haskell support them natively",
+        "Types that inherit from multiple interfaces; supported in Java and C#",
+        "Types with runtime reflection capabilities; supported in Python and Ruby",
+        "Generic types constrained by numeric operations; supported in TypeScript and Rust"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the 'LMAX Disruptor' pattern and what problem does it solve?",
+      "options": [
+        "A NoSQL storage pattern for reducing write latency in document databases",
+        "A high-performance inter-thread messaging library using a ring buffer to eliminate lock contention and enable millions of transactions per second",
+        "A design pattern for disrupting legacy monolithic architectures with microservices",
+        "A garbage collection algorithm that reduces pause times in JVM applications"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'bidirectional type checking' in modern type systems?",
+      "options": [
+        "Type checking that validates both input and output of every function simultaneously",
+        "A type inference algorithm that alternates between checking (propagating type info inward) and synthesis (inferring types outward) to reduce required annotations",
+        "A method for checking types both at compile time and runtime",
+        "Validating that two modules export matching type signatures"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "In the context of garbage collection, what is the 'tri-color marking' algorithm?",
+      "options": [
+        "A compression algorithm that categorizes heap objects by size into three buckets",
+        "A concurrent GC algorithm that classifies objects as white (unvisited), gray (discovered but not fully scanned), and black (fully scanned) to identify live objects without stopping the world",
+        "A generational GC strategy dividing the heap into young, middle-aged, and old generations",
+        "A reference counting scheme using three bits to track object lifetimes"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'row-oriented' versus 'column-oriented' storage in databases and when is each preferred?",
+      "options": [
+        "Row-oriented stores rows contiguously, ideal for OLAP analytics; column-oriented stores columns contiguously, ideal for OLTP transactions",
+        "Row-oriented stores rows contiguously, ideal for OLTP transactional workloads; column-oriented stores columns contiguously, ideal for OLAP analytical queries over many rows",
+        "They are equivalent in performance for all workloads",
+        "Column-oriented storage is only used for in-memory databases"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is 'supercompilation' in compiler optimization theory?",
+      "options": [
+        "Parallel compilation of source files across multiple CPU cores",
+        "An aggressive optimization technique that symbolically evaluates a program and specializes it by propagating information about inputs throughout the entire call graph",
+        "A method for compiling multiple languages into a single binary",
+        "Ahead-of-time compilation with profile-guided optimization enabled"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "topic": "programming",
+      "difficulty": "hard",
+      "question": "What is the 'Reactive Manifesto' and what four traits does it define for reactive systems?",
+      "options": [
+        "A testing methodology defining unit, integration, system, and acceptance tests",
+        "A design philosophy defining that reactive systems should be Responsive, Resilient, Elastic, and Message-Driven",
+        "An API design standard defining stateless, cacheable, layered, and uniform interfaces",
+        "A microservices architecture defining isolated, independently deployable, auto-scaling, and observable services"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}
