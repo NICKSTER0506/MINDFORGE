@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
-import { theme } from '../components/Theme';
+import React, { useContext } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, FlatList, Platform } from 'react-native';
+import { ThemeContext } from '../components/Theme';
 
 const TOPICS = [
     { id: '1', name: 'Programming' },
@@ -10,6 +10,8 @@ const TOPICS = [
 ];
 
 export default function TopicSelectionScreen({ navigation }) {
+    const theme = useContext(ThemeContext);
+
     const renderItem = ({ item }) => (
         <TouchableOpacity
             style={styles.card}
@@ -19,6 +21,66 @@ export default function TopicSelectionScreen({ navigation }) {
             <Text style={styles.cardText}>{item.name}</Text>
         </TouchableOpacity>
     );
+
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: theme.colors.background,
+            padding: theme.spacing.m,
+            paddingTop: 64,
+        },
+        header: {
+            ...theme.typography.h1,
+            color: theme.colors.textPrimary,
+            marginBottom: theme.spacing.xl,
+            paddingHorizontal: theme.spacing.s,
+        },
+        listContainer: {
+            gap: theme.spacing.m,
+        },
+        row: {
+            justifyContent: 'space-between',
+            gap: theme.spacing.m,
+            paddingHorizontal: theme.spacing.s,
+        },
+        card: {
+            flex: 1,
+            backgroundColor: theme.colors.surface,
+            borderRadius: theme.borderRadius.card,
+            padding: theme.spacing.xl,
+            borderWidth: 1,
+            borderColor: theme.colors.border,
+            aspectRatio: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            ...Platform.select({
+                ios: {
+                    shadowColor: '#000000',
+                    shadowOffset: { width: 0, height: 4 },
+                    shadowOpacity: 0.05,
+                    shadowRadius: 8,
+                },
+                android: {
+                    elevation: 3,
+                },
+            }),
+        },
+        cardText: {
+            color: theme.colors.textPrimary,
+            fontSize: 18,
+            fontWeight: 'bold',
+            textAlign: 'center',
+        },
+        backButton: {
+            marginTop: theme.spacing.xl,
+            padding: theme.spacing.m,
+            alignItems: 'center',
+        },
+        backButtonText: {
+            color: theme.colors.textSecondary,
+            fontSize: 16,
+        }
+    });
 
     return (
         <View style={styles.container}>
@@ -37,52 +99,3 @@ export default function TopicSelectionScreen({ navigation }) {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: theme.colors.background,
-        padding: theme.spacing.m,
-        paddingTop: 64,
-    },
-    header: {
-        ...theme.typography.h1,
-        color: theme.colors.textPrimary,
-        marginBottom: theme.spacing.xl,
-        paddingHorizontal: theme.spacing.s,
-    },
-    listContainer: {
-        gap: theme.spacing.m,
-    },
-    row: {
-        justifyContent: 'space-between',
-        gap: theme.spacing.m,
-        paddingHorizontal: theme.spacing.s,
-    },
-    card: {
-        flex: 1,
-        backgroundColor: theme.colors.surface,
-        borderRadius: theme.borderRadius.card,
-        padding: theme.spacing.xl,
-        borderWidth: 1,
-        borderColor: theme.colors.border,
-        aspectRatio: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    cardText: {
-        color: theme.colors.textPrimary,
-        fontSize: 18,
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },
-    backButton: {
-        marginTop: theme.spacing.xl,
-        padding: theme.spacing.m,
-        alignItems: 'center',
-    },
-    backButtonText: {
-        color: theme.colors.textSecondary,
-        fontSize: 16,
-    }
-});

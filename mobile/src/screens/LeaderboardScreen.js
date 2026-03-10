@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
-import { theme } from '../components/Theme';
+import { ThemeContext } from '../components/Theme';
 import { API_BASE_URL } from '../config/api';
 
 export default function LeaderboardScreen({ navigation }) {
+    const theme = useContext(ThemeContext);
     const [leaderboard, setLeaderboard] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -13,7 +14,7 @@ export default function LeaderboardScreen({ navigation }) {
 
     const fetchLeaderboard = async () => {
         try {
-            const res = await fetch(`${API_BASE_URL} /api/leaderboard`);
+            const res = await fetch(`${API_BASE_URL}/api/leaderboard`);
             const data = await res.json();
             setLeaderboard(data);
         } catch (error) {
@@ -33,6 +34,79 @@ export default function LeaderboardScreen({ navigation }) {
             </View>
         );
     };
+
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: theme.colors.background,
+            padding: theme.spacing.m,
+            paddingTop: 64,
+            justifyContent: 'space-between',
+        },
+        header: {
+            ...theme.typography.h1,
+            color: theme.colors.textPrimary,
+            marginBottom: theme.spacing.xl,
+            paddingHorizontal: theme.spacing.s,
+        },
+        listContainer: {
+            flex: 1,
+            paddingHorizontal: theme.spacing.s,
+        },
+        row: {
+            flexDirection: 'row',
+            padding: theme.spacing.m,
+            backgroundColor: theme.colors.surface,
+            borderRadius: theme.borderRadius.card,
+            borderWidth: 1,
+            borderColor: theme.colors.border,
+            alignItems: 'center',
+            ...Platform.select({
+                ios: {
+                    shadowColor: '#000000',
+                    shadowOffset: { width: 0, height: 2 },
+                    shadowOpacity: 0.05,
+                    shadowRadius: 4,
+                },
+                android: {
+                    elevation: 2,
+                },
+            }),
+        },
+        topRow: {
+            borderColor: theme.colors.accent,
+            backgroundColor: theme.isDarkMode ? '#20202A' : '#F0EFFF', // Subtle highlight for light mode
+        },
+        rank: {
+            width: 40,
+            color: theme.colors.textSecondary,
+            ...theme.typography.leaderboardRow,
+        },
+        username: {
+            flex: 1,
+            color: theme.colors.textPrimary,
+            ...theme.typography.leaderboardRow,
+            fontWeight: '500',
+        },
+        score: {
+            color: theme.colors.textSecondary,
+            ...theme.typography.leaderboardRow,
+        },
+        topText: {
+            color: theme.colors.accent,
+            fontWeight: 'bold',
+        },
+        backButton: {
+            marginTop: theme.spacing.xl,
+            marginBottom: theme.spacing.xl,
+            padding: theme.spacing.m,
+            alignItems: 'center',
+        },
+        backButtonText: {
+            color: theme.colors.textSecondary,
+            fontSize: 16,
+        }
+    });
 
     return (
         <View style={styles.container}>
@@ -58,65 +132,3 @@ export default function LeaderboardScreen({ navigation }) {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: theme.colors.background,
-        padding: theme.spacing.m,
-        paddingTop: 64,
-        justifyContent: 'space-between',
-    },
-    header: {
-        ...theme.typography.h1,
-        color: theme.colors.textPrimary,
-        marginBottom: theme.spacing.xl,
-        paddingHorizontal: theme.spacing.s,
-    },
-    listContainer: {
-        flex: 1,
-        paddingHorizontal: theme.spacing.s,
-    },
-    row: {
-        flexDirection: 'row',
-        padding: theme.spacing.m,
-        backgroundColor: theme.colors.surface,
-        borderRadius: theme.borderRadius.card,
-        borderWidth: 1,
-        borderColor: theme.colors.border,
-        alignItems: 'center',
-    },
-    topRow: {
-        borderColor: theme.colors.accent,
-        backgroundColor: '#20202A',
-    },
-    rank: {
-        width: 40,
-        color: theme.colors.textSecondary,
-        ...theme.typography.leaderboardRow,
-    },
-    username: {
-        flex: 1,
-        color: theme.colors.textPrimary,
-        ...theme.typography.leaderboardRow,
-        fontWeight: '500',
-    },
-    score: {
-        color: theme.colors.textSecondary,
-        ...theme.typography.leaderboardRow,
-    },
-    topText: {
-        color: theme.colors.textPrimary,
-        fontWeight: 'bold',
-    },
-    backButton: {
-        marginTop: theme.spacing.xl,
-        marginBottom: theme.spacing.xl,
-        padding: theme.spacing.m,
-        alignItems: 'center',
-    },
-    backButtonText: {
-        color: theme.colors.textSecondary,
-        fontSize: 16,
-    }
-});

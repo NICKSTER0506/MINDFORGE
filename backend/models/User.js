@@ -6,6 +6,9 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     totalXP: { type: Number, default: 0 },
+    lastDailyPlayDate: { type: String, default: null }, // Stored as YYYY-MM-DD
+    dailyStreak: { type: Number, default: 0 },
+    maxDailyStreak: { type: Number, default: 0 },
     createdAt: { type: Date, default: Date.now }
 });
 

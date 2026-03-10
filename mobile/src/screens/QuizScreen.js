@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated, Platform } from 'react-native';
-import { theme } from '../components/Theme';
+import { ThemeContext } from '../components/Theme';
 import { AuthContext } from '../context/AuthContext';
 import { API_BASE_URL } from '../config/api';
 import * as Haptics from 'expo-haptics';
@@ -14,12 +14,16 @@ const difficulties = {
 
 export default function QuizScreen({ route, navigation }) {
     const { topic } = route.params;
-    const { token } = useContext(AuthContext);
+    const { token, updateUserData } = useContext(AuthContext);
+    const theme = useContext(ThemeContext);
 
     const [questions, setQuestions] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [isFetching, setIsFetching] = useState(true);
+
+    // Track all answers for the Review screen
+    const [userAnswers, setUserAnswers] = useState([]);
 
     // Stats tracking
     const [correctCounts, setCorrectCounts] = useState({ easy: 0, medium: 0, hard: 0 });
@@ -39,10 +43,21 @@ export default function QuizScreen({ route, navigation }) {
 
     const fetchQuestions = async () => {
         try {
-            const res = await fetch(`${API_BASE_URL}/api/quiz/${topic}`, {
+            const endpoint = topic === 'Daily Challenge'
+                ? `${API_BASE_URL}/api/quiz/daily`
+                : `${API_BASE_URL}/api/quiz/${topic}`;
+
+            const res = await fetch(endpoint, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const data = await res.json();
+
+            if (res.status === 400) {
+                alert(data.error || 'You have already completed today\'s Daily Challenge!');
+                navigation.goBack();
+                return;
+            }
+
             if (data.length > 0) {
                 setQuestions(data);
                 startQuestion(data[0]);
@@ -96,6 +111,13 @@ export default function QuizScreen({ route, navigation }) {
         if (timerRef.current) clearInterval(timerRef.current);
         progressAnim.stopAnimation();
 
+        // Record the answer
+        setUserAnswers(prev => {
+            const newAnswers = [...prev];
+            newAnswers[currentIndex] = index;
+            return newAnswers;
+        });
+
         Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
 
         // Scale Animation
@@ -106,9 +128,6 @@ export default function QuizScreen({ route, navigation }) {
 
         const currentQ = questions[currentIndex];
         const isCorrect = index === currentQ.correctAnswerIndex;
-
-        // Play Sound (Optional, simplified here)
-        // await Audio.Sound.createAsync(require('../../assets/tap.wav'), { shouldPlay: true });
 
         if (isCorrect) {
             setCorrectCounts(prev => ({
@@ -148,10 +167,17 @@ export default function QuizScreen({ route, navigation }) {
             });
             const data = await res.json();
 
+            // Update user's context XP
+            if (data.success && data.newTotalXP !== undefined) {
+                await updateUserData({ totalXP: data.newTotalXP });
+            }
+
             navigation.replace('Result', {
                 resultData: data,
                 totalCorrect: correctCounts.easy + correctCounts.medium + correctCounts.hard,
-                totalQuestions: questions.length
+                totalQuestions: questions.length,
+                questions: questions,
+                userAnswers: userAnswers
             });
 
         } catch (err) {
@@ -159,6 +185,85 @@ export default function QuizScreen({ route, navigation }) {
             navigation.replace('Home');
         }
     };
+
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: theme.colors.background,
+            padding: theme.spacing.m,
+            paddingTop: 64,
+            justifyContent: 'space-between',
+        },
+        loadingText: {
+            color: theme.colors.textPrimary,
+            textAlign: 'center',
+            marginTop: 100,
+        },
+        topSection: {
+            gap: theme.spacing.s,
+        },
+        progressText: {
+            color: theme.colors.textSecondary,
+            fontSize: theme.typography.label.fontSize,
+            fontWeight: 'bold',
+        },
+        timerTrack: {
+            height: 6,
+            backgroundColor: theme.colors.border,
+            borderRadius: 3,
+            overflow: 'hidden',
+        },
+        timerFill: {
+            height: '100%',
+        },
+        difficultyText: {
+            color: theme.colors.textSecondary,
+            fontSize: theme.typography.label.fontSize,
+            textAlign: 'right',
+        },
+        middleSection: {
+            flex: 1,
+            justifyContent: 'center',
+            paddingVertical: theme.spacing.xl,
+        },
+        questionText: {
+            ...theme.typography.question,
+            color: theme.colors.textPrimary,
+            textAlign: 'center',
+        },
+        bottomSection: {
+            gap: theme.spacing.m,
+            marginBottom: theme.spacing.xl,
+        },
+        optionCard: {
+            backgroundColor: theme.colors.surface,
+            borderWidth: 1,
+            borderColor: theme.colors.border,
+            padding: theme.spacing.m,
+            borderRadius: theme.borderRadius.card,
+            minHeight: 64,
+            justifyContent: 'center',
+            ...Platform.select({
+                ios: {
+                    shadowColor: '#000000',
+                    shadowOffset: { width: 0, height: 2 },
+                    shadowOpacity: 0.05,
+                    shadowRadius: 4,
+                },
+                android: {
+                    elevation: 1,
+                },
+            }),
+        },
+        optionCardSelected: {
+            borderColor: theme.colors.accent,
+            backgroundColor: theme.isDarkMode ? '#20202A' : '#F0EFFF', // subtle highlight matching theme
+        },
+        optionText: {
+            ...theme.typography.option,
+            color: theme.colors.textPrimary,
+        }
+    });
 
     if (isFetching || questions.length === 0) {
         return <View style={styles.container}><Text style={styles.loadingText}>Loading...</Text></View>;
@@ -207,71 +312,3 @@ export default function QuizScreen({ route, navigation }) {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: theme.colors.background,
-        padding: theme.spacing.m,
-        paddingTop: 64,
-        justifyContent: 'space-between',
-    },
-    loadingText: {
-        color: theme.colors.textPrimary,
-        textAlign: 'center',
-        marginTop: 100,
-    },
-    topSection: {
-        gap: theme.spacing.s,
-    },
-    progressText: {
-        color: theme.colors.textSecondary,
-        fontSize: theme.typography.label.fontSize,
-        fontWeight: 'bold',
-    },
-    timerTrack: {
-        height: 6,
-        backgroundColor: theme.colors.border,
-        borderRadius: 3,
-        overflow: 'hidden',
-    },
-    timerFill: {
-        height: '100%',
-    },
-    difficultyText: {
-        color: theme.colors.textSecondary,
-        fontSize: theme.typography.label.fontSize,
-        textAlign: 'right',
-    },
-    middleSection: {
-        flex: 1,
-        justifyContent: 'center',
-        paddingVertical: theme.spacing.xl,
-    },
-    questionText: {
-        ...theme.typography.question,
-        color: theme.colors.textPrimary,
-        textAlign: 'center',
-    },
-    bottomSection: {
-        gap: theme.spacing.m,
-        marginBottom: theme.spacing.xl,
-    },
-    optionCard: {
-        backgroundColor: theme.colors.surface,
-        borderWidth: 1,
-        borderColor: theme.colors.border,
-        padding: theme.spacing.m,
-        borderRadius: theme.borderRadius.card,
-        minHeight: 64,
-        justifyContent: 'center',
-    },
-    optionCardSelected: {
-        borderColor: theme.colors.accent,
-        backgroundColor: '#20202A', // slightly lighter surface
-    },
-    optionText: {
-        ...theme.typography.option,
-        color: theme.colors.textPrimary,
-    }
-});

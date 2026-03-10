@@ -1,11 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator, Alert, Platform } from 'react-native';
-import { theme } from '../components/Theme';
+import { ThemeContext } from '../components/Theme';
 import { AuthContext } from '../context/AuthContext';
 import { API_BASE_URL } from '../config/api';
 
 export default function LoginScreen({ navigation }) {
     const { login } = useContext(AuthContext);
+    const theme = useContext(ThemeContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
@@ -39,6 +40,53 @@ export default function LoginScreen({ navigation }) {
             setLoading(false);
         }
     };
+
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: theme.colors.background,
+            justifyContent: 'center',
+            padding: theme.spacing.xl,
+        },
+        logo: {
+            ...theme.typography.h1,
+            color: theme.colors.textPrimary,
+            textAlign: 'center',
+            marginBottom: 64,
+            letterSpacing: 2,
+        },
+        form: {
+            gap: theme.spacing.m,
+        },
+        input: {
+            backgroundColor: theme.colors.surface,
+            color: theme.colors.textPrimary,
+            padding: 16,
+            borderRadius: theme.borderRadius.button,
+            borderWidth: 1,
+            borderColor: theme.colors.border,
+            fontSize: 16,
+        },
+        button: {
+            backgroundColor: theme.colors.accent,
+            padding: 16,
+            borderRadius: theme.borderRadius.button,
+            alignItems: 'center',
+            marginTop: theme.spacing.s,
+        },
+        buttonText: {
+            color: '#FFFFFF',
+            fontWeight: 'bold',
+            fontSize: 16,
+            letterSpacing: 1,
+        },
+        linkText: {
+            color: theme.colors.textSecondary,
+            textAlign: 'center',
+            marginTop: theme.spacing.l,
+            fontSize: theme.typography.label.fontSize,
+        }
+    });
 
     return (
         <View style={styles.container}>
@@ -78,7 +126,7 @@ export default function LoginScreen({ navigation }) {
                     activeOpacity={0.9}
                 >
                     {loading ? (
-                        <ActivityIndicator color={theme.colors.textPrimary} />
+                        <ActivityIndicator color={'#FFFFFF'} />
                     ) : (
                         <Text style={styles.buttonText}>
                             {isRegistering ? 'REGISTER' : 'LOGIN'}
@@ -95,50 +143,3 @@ export default function LoginScreen({ navigation }) {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: theme.colors.background,
-        justifyContent: 'center',
-        padding: theme.spacing.xl,
-    },
-    logo: {
-        ...theme.typography.h1,
-        color: theme.colors.textPrimary,
-        textAlign: 'center',
-        marginBottom: 64,
-        letterSpacing: 2,
-    },
-    form: {
-        gap: theme.spacing.m,
-    },
-    input: {
-        backgroundColor: theme.colors.surface,
-        color: theme.colors.textPrimary,
-        padding: 16,
-        borderRadius: theme.borderRadius.button,
-        borderWidth: 1,
-        borderColor: theme.colors.border,
-        fontSize: 16,
-    },
-    button: {
-        backgroundColor: theme.colors.accent,
-        padding: 16,
-        borderRadius: theme.borderRadius.button,
-        alignItems: 'center',
-        marginTop: theme.spacing.s,
-    },
-    buttonText: {
-        color: theme.colors.textPrimary,
-        fontWeight: 'bold',
-        fontSize: 16,
-        letterSpacing: 1,
-    },
-    linkText: {
-        color: theme.colors.textSecondary,
-        textAlign: 'center',
-        marginTop: theme.spacing.l,
-        fontSize: theme.typography.label.fontSize,
-    }
-});

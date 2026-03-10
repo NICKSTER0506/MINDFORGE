@@ -10,6 +10,10 @@ import TopicSelectionScreen from '../screens/TopicSelectionScreen';
 import QuizScreen from '../screens/QuizScreen';
 import ResultScreen from '../screens/ResultScreen';
 import LeaderboardScreen from '../screens/LeaderboardScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import ReviewScreen from '../screens/ReviewScreen';
+import StatsScreen from '../screens/StatsScreen';
+import DailyChallengeScreen from '../screens/DailyChallengeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +34,10 @@ export default function AppNavigator() {
                 <Stack.Screen name="Quiz" component={QuizScreen} />
                 <Stack.Screen name="Result" component={ResultScreen} />
                 <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
+                <Stack.Screen name="Profile" component={ProfileScreen} />
+                <Stack.Screen name="Review" component={ReviewScreen} />
+                <Stack.Screen name="Stats" component={StatsScreen} />
+                <Stack.Screen name="DailyChallenge" component={DailyChallengeScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
