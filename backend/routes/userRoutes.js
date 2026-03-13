@@ -94,13 +94,13 @@ router.get('/stats', auth, async (req, res) => {
 
             // Difficulty Aggregation (assuming frontend passes these, or deduce from known limits)
             diffStats.easy.correct += attempt.easyCorrect || 0;
-            diffStats.easy.total += 8; // Based on quiz generator limits
+            diffStats.easy.total += 4; // Based on quiz generator limits
 
             diffStats.medium.correct += attempt.mediumCorrect || 0;
-            diffStats.medium.total += 7;
+            diffStats.medium.total += 4;
 
             diffStats.hard.correct += attempt.hardCorrect || 0;
-            diffStats.hard.total += 5;
+            diffStats.hard.total += 2;
         });
 
         const overallAccuracy = Math.round((totalCorrect / totalQuestionsAll) * 100);

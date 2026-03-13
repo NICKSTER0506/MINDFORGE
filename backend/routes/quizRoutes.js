@@ -73,9 +73,9 @@ router.get('/:topic', auth, async (req, res) => {
         if (topic === 'daily' || topic === 'submit') return; // Handled by other routes
 
         // In a real app we would pick random samples. Here we just take the limits.
-        const easy = await Question.aggregate([{ $match: { topic, difficulty: 'easy' } }, { $sample: { size: 8 } }]);
-        const medium = await Question.aggregate([{ $match: { topic, difficulty: 'medium' } }, { $sample: { size: 7 } }]);
-        const hard = await Question.aggregate([{ $match: { topic, difficulty: 'hard' } }, { $sample: { size: 5 } }]);
+        const easy = await Question.aggregate([{ $match: { topic, difficulty: 'easy' } }, { $sample: { size: 4 } }]);
+        const medium = await Question.aggregate([{ $match: { topic, difficulty: 'medium' } }, { $sample: { size: 4 } }]);
+        const hard = await Question.aggregate([{ $match: { topic, difficulty: 'hard' } }, { $sample: { size: 2 } }]);
 
         // Return combined list exactly as requested
         res.json([...easy, ...medium, ...hard]);
