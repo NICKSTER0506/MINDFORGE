@@ -2,24 +2,31 @@ import React, { createContext, useState, useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const lightColors = {
-    background: '#F5F7FB',
-    surface: '#FFFFFF',
-    accent: '#6C63FF',
-    timerWarning: '#FF5A5F',
-    textPrimary: '#1A1A1A',
-    textSecondary: '#6B7280',
-    border: '#E5E7EB',
+const darkColors = {
+    background: '#0F172A',
+    surface: '#1E293B',
+    surfaceHighlight: '#334155',
+    primary: '#6366F1',
+    success: '#22C55E',
+    warning: '#F59E0B',
+    error: '#EF4444',
+    textPrimary: '#F8FAFC',
+    textSecondary: '#94A3B8',
+    border: '#334155',
 };
 
-const darkColors = {
-    background: '#0F0F11',
-    surface: '#17171C',
-    accent: '#6C63FF',
-    timerWarning: '#FF5A5F',
-    textPrimary: '#FFFFFF',
-    textSecondary: '#9CA3AF',
-    border: '#26262C',
+// Light mode is kept for compatibility but dark is default
+const lightColors = {
+    background: '#F1F5F9',
+    surface: '#FFFFFF',
+    surfaceHighlight: '#E2E8F0',
+    primary: '#6366F1',
+    success: '#22C55E',
+    warning: '#F59E0B',
+    error: '#EF4444',
+    textPrimary: '#0F172A',
+    textSecondary: '#475569',
+    border: '#CBD5E1',
 };
 
 const sharedTheme = {
@@ -33,19 +40,26 @@ const sharedTheme = {
     borderRadius: {
         card: 14,
         button: 12,
+        circle: 100,
     },
     typography: {
-        h1: { fontSize: 32, fontWeight: 'bold' },
-        question: { fontSize: 20, fontWeight: '500' },
-        option: { fontSize: 16 },
-        label: { fontSize: 13 },
-        leaderboardRow: { fontSize: 15 },
+        h1: { fontSize: 28, fontWeight: 'bold', fontFamily: 'Inter' },
+        h2: { fontSize: 24, fontWeight: '600', fontFamily: 'Inter' },
+        h3: { fontSize: 20, fontWeight: '600', fontFamily: 'Inter' },
+        body: { fontSize: 16, fontWeight: '400', fontFamily: 'Inter' },
+        label: { fontSize: 14, fontWeight: '500', fontFamily: 'Inter' },
+        caption: { fontSize: 12, fontWeight: '400', fontFamily: 'Inter' },
+        // Legacy support
+        question: { fontSize: 20, fontWeight: '500', fontFamily: 'Inter' },
+        option: { fontSize: 16, fontFamily: 'Inter' },
+        leaderboardRow: { fontSize: 15, fontFamily: 'Inter' },
     }
 };
 
 // Default export for situations outside of components (fallback)
+// Note: Use ThemeContext.Provider in your app root for dynamic theming
 export const theme = {
-    colors: lightColors, // Fallback to light mode
+    colors: darkColors, // Default to dark mode
     ...sharedTheme
 };
 
@@ -69,7 +83,7 @@ export const ThemeProvider = ({ children }) => {
         loadTheme();
     }, []);
 
-    // We can also let the user override this later with AsyncStorage
+    // Default to dark mode, can be switched to light
     const colors = isDarkMode ? darkColors : lightColors;
 
     const currentTheme = {

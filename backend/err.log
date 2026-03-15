@@ -1,6 +1,1 @@
-Registration error: TypeError: next is not a function
-    at model.<anonymous> (C:\Users\nikhi\MINDFORGE\backend\models\User.js:19:9)
-    at async Kareem.execPre (C:\Users\nikhi\MINDFORGE\backend\node_modules\kareem\index.js:70:24)
-    at async model.$__save (C:\Users\nikhi\MINDFORGE\backend\node_modules\mongoose\lib\model.js:376:5)
-    at async model.save (C:\Users\nikhi\MINDFORGE\backend\node_modules\mongoose\lib\model.js:642:5)
-    at async C:\Users\nikhi\MINDFORGE\backend\routes\authRoutes.js:14:9
+

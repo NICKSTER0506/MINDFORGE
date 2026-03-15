@@ -17,7 +17,8 @@ router.post('/register', async (req, res) => {
         res.status(201).json({ token, user: { id: user._id, username: user.username, totalXP: user.totalXP } });
     } catch (err) {
         console.error('Registration error:', err);
-        res.status(500).json({ error: 'Registration failed' });
+        console.error('Error stack:', err.stack);
+        res.status(500).json({ error: 'Registration failed', details: err.message });
     }
 });
 

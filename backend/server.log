@@ -1,0 +1,4 @@
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+MongoDB connection established to Atlas cluster
+[SEED] Inserted 300 questions into the database.
+Server running on port 5000

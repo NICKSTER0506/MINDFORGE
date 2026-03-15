@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Animated, Platform } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { ThemeContext } from '../components/Theme';
 import * as Haptics from 'expo-haptics';
+import Card from '../components/Card';
+import PrimaryButton from '../components/PrimaryButton';
 
 export default function ResultScreen({ route, navigation }) {
     const { resultData, totalCorrect, totalQuestions, questions, userAnswers } = route.params;
@@ -38,27 +40,6 @@ export default function ResultScreen({ route, navigation }) {
             color: theme.colors.textPrimary,
             marginBottom: theme.spacing.xl,
         },
-        scoreCard: {
-            // ... omitting for brevity if not changed, but I will include full replacement for safety
-            backgroundColor: theme.colors.surface,
-            padding: theme.spacing.xl,
-            borderRadius: theme.borderRadius.card,
-            borderWidth: 1,
-            borderColor: theme.colors.border,
-            alignItems: 'center',
-            width: '100%',
-            ...Platform.select({
-                ios: {
-                    shadowColor: '#000000',
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.05,
-                    shadowRadius: 8,
-                },
-                android: {
-                    elevation: 3,
-                },
-            }),
-        },
         scoreText: {
             fontSize: 48,
             fontWeight: 'bold',
@@ -78,7 +59,7 @@ export default function ResultScreen({ route, navigation }) {
         xpText: {
             fontSize: 32,
             fontWeight: 'bold',
-            color: theme.colors.accent,
+            color: theme.colors.success,
         },
         levelText: {
             color: theme.colors.textSecondary,
@@ -88,29 +69,6 @@ export default function ResultScreen({ route, navigation }) {
             gap: theme.spacing.m,
             marginBottom: theme.spacing.xl,
             width: '100%',
-        },
-        primaryButton: {
-            backgroundColor: theme.colors.accent,
-            paddingVertical: 18,
-            borderRadius: theme.borderRadius.button,
-            alignItems: 'center',
-            ...Platform.select({
-                ios: {
-                    shadowColor: theme.colors.accent,
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.3,
-                    shadowRadius: 6,
-                },
-                android: {
-                    elevation: 6,
-                },
-            }),
-        },
-        primaryButtonText: {
-            color: '#FFFFFF',
-            fontWeight: 'bold',
-            fontSize: 18,
-            letterSpacing: 1,
         },
         secondaryButton: {
             paddingVertical: 14,
@@ -131,7 +89,7 @@ export default function ResultScreen({ route, navigation }) {
             <Animated.View style={[styles.content, { transform: [{ scale: scaleAnim }], opacity: opacityAnim }]}>
                 <Text style={styles.header}>Quiz Complete</Text>
 
-                <View style={styles.scoreCard}>
+                <Card type="score" style={{ width: '100%' }}>
                     <Text style={styles.scoreText}>{totalCorrect} / {totalQuestions}</Text>
                     <Text style={styles.scoreLabel}>Correct Answers</Text>
 
@@ -139,18 +97,17 @@ export default function ResultScreen({ route, navigation }) {
 
                     <Text style={styles.xpText}>+{xpEarned} XP</Text>
                     <Text style={styles.levelText}>New Level {newLevel}</Text>
-                </View>
-
+                </Card>
             </Animated.View>
 
             <View style={styles.bottomSection}>
-                <TouchableOpacity
-                    style={styles.primaryButton}
+                <PrimaryButton
+                    variant="gradient"
+                    gradientColors={['#6366F1', '#818CF8']}
                     onPress={() => navigation.navigate('Review', { questions, userAnswers })}
-                    activeOpacity={0.9}
                 >
-                    <Text style={styles.primaryButtonText}>Review Answers</Text>
-                </TouchableOpacity>
+                    Review Answers
+                </PrimaryButton>
 
                 <TouchableOpacity
                     style={styles.secondaryButton}

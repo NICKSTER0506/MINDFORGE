@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator, Alert, Platform } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
 import { ThemeContext } from '../components/Theme';
 import { AuthContext } from '../context/AuthContext';
 import { API_BASE_URL } from '../config/api';
+import PrimaryButton from '../components/PrimaryButton';
 
 export default function LoginScreen({ navigation }) {
     const { login } = useContext(AuthContext);
@@ -48,12 +49,23 @@ export default function LoginScreen({ navigation }) {
             justifyContent: 'center',
             padding: theme.spacing.xl,
         },
+        logoContainer: {
+            alignItems: 'center',
+            marginBottom: 64,
+        },
         logo: {
             ...theme.typography.h1,
-            color: theme.colors.textPrimary,
-            textAlign: 'center',
-            marginBottom: 64,
-            letterSpacing: 2,
+            color: theme.colors.primary,
+            letterSpacing: 4,
+            textShadowColor: theme.colors.primary,
+            textShadowOffset: { width: 0, height: 0 },
+            textShadowRadius: 20,
+        },
+        logoGlow: {
+            fontSize: 32,
+            color: theme.colors.primary,
+            opacity: 0.5,
+            marginTop: 8,
         },
         form: {
             gap: theme.spacing.m,
@@ -66,19 +78,7 @@ export default function LoginScreen({ navigation }) {
             borderWidth: 1,
             borderColor: theme.colors.border,
             fontSize: 16,
-        },
-        button: {
-            backgroundColor: theme.colors.accent,
-            padding: 16,
-            borderRadius: theme.borderRadius.button,
-            alignItems: 'center',
-            marginTop: theme.spacing.s,
-        },
-        buttonText: {
-            color: '#FFFFFF',
-            fontWeight: 'bold',
-            fontSize: 16,
-            letterSpacing: 1,
+            fontFamily: 'Inter',
         },
         linkText: {
             color: theme.colors.textSecondary,
@@ -90,7 +90,10 @@ export default function LoginScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.logo}>MINDFORGE</Text>
+            <View style={styles.logoContainer}>
+                <Text style={styles.logo}>MINDFORGE</Text>
+                <Text style={styles.logoGlow}>◆ Learn. Grow. Achieve. ◆</Text>
+            </View>
 
             <View style={styles.form}>
                 {isRegistering && (
@@ -120,19 +123,18 @@ export default function LoginScreen({ navigation }) {
                     secureTextEntry
                 />
 
-                <TouchableOpacity
-                    style={styles.button}
+                <PrimaryButton
+                    variant="gradient"
+                    gradientColors={['#6366F1', '#818CF8']}
                     onPress={handleAuth}
-                    activeOpacity={0.9}
+                    style={{ marginTop: theme.spacing.s }}
                 >
                     {loading ? (
                         <ActivityIndicator color={'#FFFFFF'} />
                     ) : (
-                        <Text style={styles.buttonText}>
-                            {isRegistering ? 'REGISTER' : 'LOGIN'}
-                        </Text>
+                        isRegistering ? 'REGISTER' : 'LOGIN'
                     )}
-                </TouchableOpacity>
+                </PrimaryButton>
 
                 <TouchableOpacity onPress={() => setIsRegistering(!isRegistering)}>
                     <Text style={styles.linkText}>

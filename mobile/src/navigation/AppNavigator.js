@@ -2,7 +2,6 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ThemeProvider } from '@react-navigation/native'; // We'll handle custom theme styling locally
 
 import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
@@ -24,7 +23,7 @@ export default function AppNavigator() {
                 initialRouteName="Login"
                 screenOptions={{
                     headerShown: false,
-                    contentStyle: { backgroundColor: '#0F0F11' },
+                    contentStyle: { backgroundColor: '#0F172A' }, // Dark background
                     animation: 'fade', // smooth transitions
                 }}
             >

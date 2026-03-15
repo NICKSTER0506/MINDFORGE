@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, TouchableOpacity, Switch } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ThemeContext } from '../components/Theme';
 import { AuthContext } from '../context/AuthContext';
+import Card from '../components/Card';
+import ProgressBar from '../components/ProgressBar';
 
 export default function ProfileScreen({ navigation }) {
     const { user, logout } = useContext(AuthContext);
@@ -55,14 +57,14 @@ export default function ProfileScreen({ navigation }) {
             borderRadius: 50,
             backgroundColor: theme.colors.surface,
             borderWidth: 2,
-            borderColor: theme.colors.accent,
+            borderColor: theme.colors.primary,
             justifyContent: 'center',
             alignItems: 'center',
             marginBottom: theme.spacing.m,
         },
         avatarText: {
             ...theme.typography.h1,
-            color: theme.colors.accent,
+            color: theme.colors.primary,
             fontSize: 48,
         },
         usernameText: {
@@ -74,31 +76,10 @@ export default function ProfileScreen({ navigation }) {
             color: theme.colors.textSecondary,
             fontSize: theme.typography.label.fontSize,
         },
-        statsCard: {
-            backgroundColor: theme.colors.surface,
-            padding: theme.spacing.l,
-            borderRadius: theme.borderRadius.card,
-            borderWidth: 1,
-            borderColor: theme.colors.border,
-            alignItems: 'center',
-            marginBottom: theme.spacing.xl,
-        },
         levelText: {
             ...theme.typography.h1,
             color: theme.colors.textPrimary,
             marginBottom: theme.spacing.s,
-        },
-        progressBarContainer: {
-            width: '100%',
-            height: 6,
-            backgroundColor: theme.colors.border,
-            borderRadius: 3,
-            overflow: 'hidden',
-            marginVertical: theme.spacing.m,
-        },
-        progressBarFill: {
-            height: '100%',
-            backgroundColor: theme.colors.accent,
         },
         xpText: {
             color: theme.colors.textSecondary,
@@ -109,28 +90,6 @@ export default function ProfileScreen({ navigation }) {
             marginTop: 'auto',
             marginBottom: theme.spacing.xl,
         },
-        backButton: {
-            paddingVertical: 14,
-            borderRadius: theme.borderRadius.button,
-            borderWidth: 1,
-            borderColor: theme.colors.border,
-            alignItems: 'center',
-        },
-        backButtonText: {
-            color: theme.colors.textPrimary,
-            fontSize: 16,
-        },
-        toggleContainer: {
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            backgroundColor: theme.colors.surface,
-            padding: theme.spacing.l,
-            borderRadius: theme.borderRadius.card,
-            borderWidth: 1,
-            borderColor: theme.colors.border,
-            marginBottom: theme.spacing.m,
-        },
         toggleText: {
             color: theme.colors.textPrimary,
             fontSize: 16,
@@ -140,12 +99,12 @@ export default function ProfileScreen({ navigation }) {
             paddingVertical: 14,
             borderRadius: theme.borderRadius.button,
             borderWidth: 1,
-            borderColor: theme.colors.timerWarning,
+            borderColor: theme.colors.error,
             alignItems: 'center',
-            backgroundColor: 'rgba(255, 90, 95, 0.1)',
+            backgroundColor: 'rgba(239, 68, 68, 0.1)',
         },
         logoutButtonText: {
-            color: theme.colors.timerWarning,
+            color: theme.colors.error,
             fontSize: 16,
             fontWeight: 'bold',
         }
@@ -161,27 +120,39 @@ export default function ProfileScreen({ navigation }) {
                 <Text style={styles.emailText}>{user?.email}</Text>
             </View>
 
-            <View style={styles.statsCard}>
+            <Card type="standard" style={{ alignItems: 'center', marginBottom: theme.spacing.xl }}>
                 <Text style={styles.levelText}>Level {lvl}</Text>
-                <View style={styles.progressBarContainer}>
-                    <View style={[styles.progressBarFill, { width: `${progressPercent}%` }]} />
-                </View>
+                <ProgressBar percentage={progressPercent} height={6} variant="primary" style={{ marginVertical: theme.spacing.m }} />
                 <Text style={styles.xpText}>{currentXp} / {reqXp} XP</Text>
-            </View>
+            </Card>
 
-            <View style={styles.toggleContainer}>
-                <Text style={styles.toggleText}>Dark Mode</Text>
-                <Switch
-                    value={theme.isDarkMode}
-                    onValueChange={toggleTheme}
-                    trackColor={{ false: theme.colors.border, true: theme.colors.accent }}
-                    thumbColor={theme.isDarkMode ? '#FFFFFF' : '#f4f3f4'}
-                />
-            </View>
+            <Card type="standard" style={{ marginBottom: theme.spacing.m }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Text style={styles.toggleText}>Dark Mode</Text>
+                    <Switch
+                        value={theme.isDarkMode}
+                        onValueChange={toggleTheme}
+                        trackColor={{ false: theme.colors.border, true: theme.colors.primary }}
+                        thumbColor={theme.isDarkMode ? '#FFFFFF' : '#f4f3f4'}
+                    />
+                </View>
+            </Card>
 
             <View style={styles.actionSection}>
-                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                    <Text style={styles.backButtonText}>Back to Home</Text>
+                <TouchableOpacity
+                    style={{
+                        paddingVertical: 14,
+                        borderRadius: theme.borderRadius.button,
+                        borderWidth: 1,
+                        borderColor: theme.colors.border,
+                        alignItems: 'center',
+                        backgroundColor: theme.colors.surface,
+                    }}
+                    onPress={() => navigation.goBack()}
+                >
+                    <Text style={{ color: theme.colors.textPrimary, fontSize: 16 }}>
+                        Back to Home
+                    </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>

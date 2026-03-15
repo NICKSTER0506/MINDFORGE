@@ -80,12 +80,12 @@ export default function ReviewScreen({ route, navigation }) {
         // Wrong answer picked by user
         optionWrong: {
             backgroundColor: 'rgba(239, 68, 68, 0.1)', // Light red
-            borderColor: theme.colors.timerWarning,
+            borderColor: theme.colors.error,
         },
         backButton: {
             marginTop: theme.spacing.m,
             marginBottom: theme.spacing.xl,
-            backgroundColor: theme.colors.accent,
+            backgroundColor: theme.colors.primary,
             paddingVertical: 16,
             borderRadius: theme.borderRadius.button,
             alignItems: 'center',

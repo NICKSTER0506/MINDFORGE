@@ -9,6 +9,7 @@ const User = require('../models/User');
 router.get('/daily/status', auth, async (req, res) => {
     try {
         const user = await User.findById(req.user.userId);
+        if (!user) return res.status(404).json({ error: 'User not found' });
         const today = new Date().toISOString().split('T')[0];
         const completedToday = user.lastDailyPlayDate === today;
 
@@ -43,6 +44,7 @@ router.get('/daily/status', auth, async (req, res) => {
 router.get('/daily', auth, async (req, res) => {
     try {
         const user = await User.findById(req.user.userId);
+        if (!user) return res.status(404).json({ error: 'User not found' });
         const today = new Date().toISOString().split('T')[0];
 
         if (user.lastDailyPlayDate === today) {
@@ -70,7 +72,7 @@ router.get('/daily', auth, async (req, res) => {
 router.get('/:topic', auth, async (req, res) => {
     try {
         const topic = req.params.topic;
-        if (topic === 'daily' || topic === 'submit') return; // Handled by other routes
+        if (topic === 'daily' || topic === 'submit' || topic === 'status') return next(); // Pass to next handlers
 
         // In a real app we would pick random samples. Here we just take the limits.
         const easy = await Question.aggregate([{ $match: { topic, difficulty: 'easy' } }, { $sample: { size: 4 } }]);
@@ -80,6 +82,7 @@ router.get('/:topic', auth, async (req, res) => {
         // Return combined list exactly as requested
         res.json([...easy, ...medium, ...hard]);
     } catch (err) {
+        console.error('Fetch Questions Error:', err);
         res.status(500).json({ error: 'Failed to fetch questions' });
     }
 });
@@ -119,6 +122,7 @@ router.post('/submit', auth, async (req, res) => {
 
         // Fetch User to update XP
         const user = await User.findById(req.user.userId);
+        if (!user) return res.status(404).json({ error: 'User not found' });
 
         let xpToAdd = xpEarned;
 

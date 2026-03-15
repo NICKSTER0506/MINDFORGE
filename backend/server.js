@@ -32,11 +32,20 @@ const startServer = async () => {
         console.log(`MongoDB connection established to Atlas cluster`);
         await require('./seed')();
 
-        app.listen(PORT, () => {
+        const server = app.listen(PORT, () => {
             console.log(`Server running on port ${PORT}`);
         });
+
+        // Handle graceful shutdown
+        process.on('SIGTERM', () => {
+            console.log('SIGTERM received. Shutting down gracefully.');
+            server.close(() => {
+                console.log('Process terminated.');
+            });
+        });
     } catch (err) {
-        console.error('Failed to start MongoDB:', err);
+        console.error('Failed to start server:', err);
+        process.exit(1);
     }
 };
 

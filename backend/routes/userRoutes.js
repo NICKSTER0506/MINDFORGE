@@ -11,6 +11,7 @@ router.get('/stats', auth, async (req, res) => {
 
         // 1. Fetch user for Total XP & Level
         const user = await User.findById(userId).select('-password');
+        if (!user) return res.status(404).json({ error: 'User not found' });
 
         // 2. Fetch all attempts for this user sorted by newest first
         const allAttempts = await Attempt.find({ userId }).sort({ completedAt: -1 });
