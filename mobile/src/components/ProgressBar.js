@@ -9,7 +9,7 @@ export default function ProgressBar({
     showLabel = false,
     label = '',
     height = 8,
-    gradientColors = ['#6366F1', '#818CF8'],
+    gradientColors = ['#7C3AED', '#9333EA'],
     variant = 'default',
     colorOverride,
 }) {
@@ -68,9 +68,9 @@ export default function ProgressBar({
 
     const getGradientColors = () => {
         if (colorOverride) return [colorOverride, colorOverride];
-        if (variant === 'success') return ['#22C55E', '#4ADE80'];
+        if (variant === 'success') return ['#10B981', '#34D399'];
         if (variant === 'warning') return ['#F59E0B', '#FBBF24'];
-        if (variant === 'timer') return ['#6366F1', '#818CF8'];
+        if (variant === 'timer') return ['#7C3AED', '#9333EA'];
         return gradientColors;
     };
 

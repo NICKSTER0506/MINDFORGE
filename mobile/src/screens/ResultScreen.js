@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
-import { ThemeContext } from '../components/Theme';
+import { ThemeContext, Card, PrimaryButton } from '../components';
 import * as Haptics from 'expo-haptics';
-import Card from '../components/Card';
-import PrimaryButton from '../components/PrimaryButton';
+import ConfettiCannon from 'react-native-confetti-cannon';
 
 export default function ResultScreen({ route, navigation }) {
     const { resultData, totalCorrect, totalQuestions, questions, userAnswers } = route.params;
@@ -14,7 +13,7 @@ export default function ResultScreen({ route, navigation }) {
     const opacityAnim = useRef(new Animated.Value(0)).current;
 
     useEffect(() => {
-        if (xpEarned > 0) {
+        if (xpEarned > 0 && theme.hapticsEnabled) {
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
         }
         Animated.parallel([
@@ -123,6 +122,15 @@ export default function ResultScreen({ route, navigation }) {
                     <Text style={styles.secondaryButtonText}>View Leaderboard</Text>
                 </TouchableOpacity>
             </View>
+
+            {totalCorrect > 0 && (
+                <ConfettiCannon 
+                    count={200} 
+                    origin={{ x: -10, y: 0 }} 
+                    fadeOut={true}
+                    fallSpeed={3000}
+                />
+            )}
         </View>
     );
 }

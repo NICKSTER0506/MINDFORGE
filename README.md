@@ -34,22 +34,23 @@ The backend is a robust RESTful API built on the Node.js runtime.
 
 ---
 
-## ✨ Core Features & Data Flow
+## ✨ Core Features & Design
 
-1. **User Authentication & Profiles:**
-   - Users register/login with a username, email, and password.
-   - The server validates credentials, hashes the password via a Mongoose pre-save hook, and returns a signed JWT.
-   - The user's `totalXP` and level progress are returned to populate their profile.
-2. **Dynamic Quiz Engine & Seeding:**
-   - Upon backend server boot, a `seed.js` script automatically injects predefined questions into the MongoDB instance if the database is empty.
-   - Questions have a `topic` and `difficulty` (easy, medium, hard).
-   - The mobile app requests questions dynamically for a specific topic, taking random samples from each difficulty bucket.
-3. **Progression & XP System:**
-   - Attempting a quiz grants XP based on the number of correct answers and their difficulty (Easy: 10XP, Medium: 15XP, Hard: 20XP).
-   - The backend tracks an `Attempt` document for each quiz session. If the user achieves a new high score for that topic, their global `totalXP` increments by the difference.
-   - Levels are dynamically calculated using a progressive requirement formula: `Required XP = 200 + (Level * 100)`.
-4. **Leaderboard:**
-   - An aggregation route fetches the top players globally descending by `totalXP`.
+1. **Modern Dark Theme (DeepWorkR Inspired):**
+   - A premium, focused interface featuring a layered dark palette (`#0B1220` background).
+   - Minimalist design using subtle borders and soft glow interactions instead of heavy shadows.
+2. **User Authentication & Profiles:**
+   - Secure registration/login with level-based progression and XP tracking.
+3. **Dynamic Quiz Engine:**
+   - Real-time question sampling from MongoDB across various topics and difficulty tiers (Easy, Medium, Hard).
+   - Automated database seeding for rapid development.
+4. **Comprehensive App Structure (12 Screens):**
+   - **Main Flow**: Login, Home, Topic Selection, Quiz, Results, Review.
+   - **Growth & Social**: Stats, Leaderboard, Profile, Friends.
+   - **Engagement**: Daily Challenge, Settings (with haptic & theme toggles).
+5. **Progression & XP System:**
+   - Dynamic level calculation: `Required XP = 200 + (Level * 100)`.
+   - XP rewards based on question difficulty and user performance.
 
 ---
 

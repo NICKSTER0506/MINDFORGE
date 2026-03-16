@@ -1,0 +1,29 @@
+{
+  "easy": [
+    {
+      "questionText": "What is the time complexity of a Linear Search in an array of size n?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+      "correctAnswerIndex": 2,
+      "difficulty": "easy",
+      "topic": "Algorithms"
+    }
+  ],
+  "medium": [
+    {
+      "questionText": "Which sorting algorithm has a worst-case time complexity of O(n^2)?",
+      "options": ["Merge Sort", "Quick Sort", "Heap Sort", "Counting Sort"],
+      "correctAnswerIndex": 1,
+      "difficulty": "medium",
+      "topic": "Algorithms"
+    }
+  ],
+  "hard": [
+    {
+      "questionText": "What is the optimal substructure property in Dynamic Programming?",
+      "options": ["The problem can be solved by breaking it into overlapping subproblems", "An optimal solution to the problem contains optimal solutions to subproblems", "The problem must be solved recursively", "The problem must have a greedy choice property"],
+      "correctAnswerIndex": 1,
+      "difficulty": "hard",
+      "topic": "Algorithms"
+    }
+  ]
+}

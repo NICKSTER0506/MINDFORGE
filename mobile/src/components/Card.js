@@ -29,17 +29,6 @@ export default function Card({
             borderWidth: 1,
             borderColor: theme.colors.border,
             padding: getPadding(),
-            ...Platform.select({
-                ios: {
-                    shadowColor: '#000000',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.1,
-                    shadowRadius: 6,
-                },
-                android: {
-                    elevation: 3,
-                },
-            }),
         },
         statCard: {
             width: '48%',
@@ -62,7 +51,7 @@ export default function Card({
         },
         primaryCard: {
             borderColor: theme.colors.primary,
-            backgroundColor: theme.isDarkMode ? '#334155' : '#E0E7FF',
+            backgroundColor: theme.isDarkMode ? '#1E1B4B' : '#EEF2FF',
         },
     });
 

@@ -30,15 +30,6 @@ export default function ProfileScreen({ navigation }) {
         navigation.replace('Login');
     };
 
-    const toggleTheme = async () => {
-        const newValue = !theme.isDarkMode;
-        theme.setIsDarkMode(newValue);
-        try {
-            await AsyncStorage.setItem('isDarkMode', JSON.stringify(newValue));
-        } catch (e) {
-            console.error('Failed to save theme preference', e);
-        }
-    };
 
     const styles = StyleSheet.create({
         container: {
@@ -127,15 +118,23 @@ export default function ProfileScreen({ navigation }) {
             </Card>
 
             <Card type="standard" style={{ marginBottom: theme.spacing.m }}>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Text style={styles.toggleText}>Dark Mode</Text>
-                    <Switch
-                        value={theme.isDarkMode}
-                        onValueChange={toggleTheme}
-                        trackColor={{ false: theme.colors.border, true: theme.colors.primary }}
-                        thumbColor={theme.isDarkMode ? '#FFFFFF' : '#f4f3f4'}
-                    />
-                </View>
+                <TouchableOpacity 
+                    style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
+                    onPress={() => navigation.navigate('Friends')}
+                >
+                    <Text style={styles.toggleText}>Friends</Text>
+                    <Text style={{ color: theme.colors.primary, fontWeight: 'bold' }}>View All</Text>
+                </TouchableOpacity>
+            </Card>
+
+            <Card type="standard" style={{ marginBottom: theme.spacing.m }}>
+                <TouchableOpacity 
+                    style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
+                    onPress={() => navigation.navigate('Settings')}
+                >
+                    <Text style={styles.toggleText}>Settings</Text>
+                    <Text style={{ color: theme.colors.textSecondary }}>⚙️</Text>
+                </TouchableOpacity>
             </Card>
 
             <View style={styles.actionSection}>

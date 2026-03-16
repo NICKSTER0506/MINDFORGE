@@ -13,6 +13,8 @@ import ProfileScreen from '../screens/ProfileScreen';
 import ReviewScreen from '../screens/ReviewScreen';
 import StatsScreen from '../screens/StatsScreen';
 import DailyChallengeScreen from '../screens/DailyChallengeScreen';
+import SettingsScreen from '../screens/SettingsScreen';
+import FriendsScreen from '../screens/FriendsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,7 +25,7 @@ export default function AppNavigator() {
                 initialRouteName="Login"
                 screenOptions={{
                     headerShown: false,
-                    contentStyle: { backgroundColor: '#0F172A' }, // Dark background
+                    contentStyle: { backgroundColor: '#0B1220' }, // New DeepWorkR-style background
                     animation: 'fade', // smooth transitions
                 }}
             >
@@ -37,6 +39,8 @@ export default function AppNavigator() {
                 <Stack.Screen name="Review" component={ReviewScreen} />
                 <Stack.Screen name="Stats" component={StatsScreen} />
                 <Stack.Screen name="DailyChallenge" component={DailyChallengeScreen} />
+                <Stack.Screen name="Settings" component={SettingsScreen} />
+                <Stack.Screen name="Friends" component={FriendsScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );

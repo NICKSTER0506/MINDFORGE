@@ -62,7 +62,7 @@ export default function LeaderboardScreen({ navigation }) {
         },
         topRow: {
             borderColor: theme.colors.primary,
-            backgroundColor: theme.isDarkMode ? '#334155' : '#E0E7FF', // Subtle highlight
+            backgroundColor: theme.isDarkMode ? '#1E1B4B' : '#EEF2FF', // Subtle highlight
         },
         rank: {
             width: 40,

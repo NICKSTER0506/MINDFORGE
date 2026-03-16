@@ -1,32 +1,34 @@
 # MINDFORGE - Development Roadmap
 
-This document outlines the structured to-do plan for the upcoming days to evolve MINDFORGE from a functional prototype into a polished, launch-ready application.
+## ✅ Completed Milestones
 
-## Day 1: The Great Data Migration (Data Seeding)
-*Goal: Successfully format, sanitize, and inject the AI-generated questions into the MongoDB Atlas database.*
+### 🎨 Phase 1: The Modern Dark Theme Overhaul
+*Goal: Transform the app into a premium, focused learning environment.*
+- [x] **DeepWorkR Aesthetic**: Implemented a layered dark theme with `#0B1220` backgrounds.
+- [x] **Subtle Modernism**: Replaced heavy shadows with thin, clean borders.
+- [x] **Unified Accents**: Global purple accent system (`#7C3AED`) with soft glows.
+- [x] **Component Alignment**: Updated `Card`, `PrimaryButton`, `OptionButton`, and `ProgressBar`.
 
-- [ ] **Write the Seeding Script:** Create `backend/scripts/seedAI.js` to parse the raw AI JSON files. The script must merge the difficulty arrays, rename keys to match the database schema (e.g., `"question"` to `"questionText"`), and enforce proper topic capitalization.
-- [ ] **Generate Remaining Datasets:** Execute the AI prompt to generate the remaining question batches for "Data Structures" and "Algorithms".
-- [ ] **Data Injection execution:** Run the seeding script to upload the hundreds of questions into the production Atlas cluster.
-- [ ] **Frontend Verification:** Boot the mobile app and complete quizzes across different topics to verify the questions are retrieved correctly and randomized.
+### 🏗️ Phase 2: Core App Structure (12 Screens)
+*Goal: Establish the full user journey and navigation flow.*
+- [x] **Navigation Registry**: All 12 pages registered in `AppNavigator.js`.
+- [x] **Settings Hub**: New screen for persistent Dark Mode, Haptics, and Sound toggles.
+- [x] **Social Foundation**: Integrated the `FriendsScreen.js` (mock).
+- [x] **Haptic Integration**: Respect haptic settings in `QuizScreen` and `ResultScreen`.
 
-## Day 2: The "Premium Feel" Polish Phase
-*Goal: Enhance the User Experience (UX) to make the app feel responsive and professional.*
+---
 
-- [ ] **Haptic/Audio Feedback:** Integrate subtle sound effects (e.g., a "ding" for correct, a "thud" for incorrect) and corresponding haptic vibrations using `expo-haptics` and `expo-av`.
-- [ ] **Visual Celebrations:** Implement a confetti animation (e.g., `react-native-confetti-cannon`) on the `ResultScreen` triggered by achieving a high score or leveling up.
-- [ ] **Smooth Transitions:** Replace the rigid, instant swapping of quiz questions with smooth, animated sliding transitions using React Native's `Animated` API.
-- [ ] **Premium Styling Tweaks:** Refine the UI by adding subtle glow effects to selected options and optimizing shadow depths across devices.
+## 🚀 Next Sessions: The Growth & Retention Phase
 
-## Day 3: User Profiles & Historical Analytics
-*Goal: Provide users with a dedicated space to view their progression and analyze their performance, increasing retention.*
+### Session 1: Engagement & Streaks
+- [ ] **Streak Logic (Backend)**: Update `User` model to track `lastDailyPlayDate` and calculate `dailyStreak`.
+- [ ] **XP Multipliers**: Implement logic in `quizRoutes.js` to reward users with XP boosts (1.2x, 1.5x) based on their current streak.
+- [ ] **Streak Dashboard**: Add a visual streak indicator (flame icon) to the `HomeScreen`.
 
-- [ ] **Profile Screen (`ProfileScreen.js`):** Develop a dedicated tab displaying the user's total XP, current Level, and a dynamic progress bar indicating the XP required for the next level.
-- [ ] **Accuracy Analytics Engine:** Update the backend aggregation pipelines to calculate the user's accuracy across different difficulty tiers and display this data visually on the profile.
-- [ ] **Recent Activity Feed:** Implement a scrolling list displaying the user's latest quiz attempts and corresponding scores.
+### Session 2: Advanced Analytics
+- [ ] **Granular Stats**: Modify backend to track accuracy per topic and per difficulty (documented in `Attempt`).
+- [ ] **Historical Charts**: Integrate `react-native-chart-kit` or similar to show performance trends over time in `StatsScreen.js`.
 
-## Day 4: Expanding Core Features
-*Goal: Introduce new gameplay elements to diversify the experience.*
-
-- [ ] **New Question Modalities:** Update the backend schema and frontend UI to support "True/False" and potentially "Fill in the Blank" code snippet questions.
-- [ ] **Global Streaks System:** Implement a "Daily Streak" tracker that monitors consecutive days logged in, rewarding users with bonus XP multipliers to encourage daily engagement.
+### Session 3: Social & Multiplayer (Alpha)
+- [ ] **Friend Infrastructure**: Implement Friend Request logic in the backend.
+- [ ] **Live Challenges**: Research Socket.io integration for real-time competitive quizzes.

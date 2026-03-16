@@ -53,17 +53,6 @@ export default function TopicSelectionScreen({ navigation }) {
             aspectRatio: 1,
             justifyContent: 'center',
             alignItems: 'center',
-            ...Platform.select({
-                ios: {
-                    shadowColor: '#000000',
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.05,
-                    shadowRadius: 8,
-                },
-                android: {
-                    elevation: 3,
-                },
-            }),
         },
         cardText: {
             color: theme.colors.textPrimary,

@@ -154,7 +154,7 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.centerSection}>
                 <PrimaryButton
                     variant="gradient"
-                    gradientColors={['#EF4444', '#F97316']}
+                    gradientColors={['#EF4444', '#B91C1C']}
                     onPress={() => navigation.navigate('DailyChallenge')}
                     style={{ width: '100%' }}
                 >
@@ -163,7 +163,7 @@ export default function HomeScreen({ navigation }) {
 
                 <PrimaryButton
                     variant="gradient"
-                    gradientColors={['#6366F1', '#818CF8']}
+                    gradientColors={['#7C3AED', '#9333EA']}
                     onPress={() => navigation.navigate('TopicSelection')}
                     style={{ width: '100%' }}
                 >

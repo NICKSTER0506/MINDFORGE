@@ -1,0 +1,57 @@
+{
+  "easy": [
+    {
+      "questionText": "What is the time complexity to access an element in an array?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "topic": "Data Structures"
+    },
+    {
+      "questionText": "Which data structure follows the LIFO (Last In First Out) principle?",
+      "options": ["Queue", "Stack", "Linked List", "Tree"],
+      "correctAnswerIndex": 1,
+      "difficulty": "easy",
+      "topic": "Data Structures"
+    },
+    {
+      "questionText": "In a linked list, what does a node typically contain?",
+      "options": ["Data and a pointer to the next node", "Data only", "Pointers only", "A pointer to the root"],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "topic": "Data Structures"
+    }
+  ],
+  "medium": [
+    {
+      "questionText": "What is the primary advantage of a Doubly Linked List over a Singly Linked List?",
+      "options": ["Less memory usage", "Faster access to the middle element", "Ability to traverse in both directions", "O(1) search time"],
+      "correctAnswerIndex": 2,
+      "difficulty": "medium",
+      "topic": "Data Structures"
+    },
+    {
+      "questionText": "In a Circular Queue, when is the queue considered full?",
+      "options": ["Front == 0", "Rear == MaxSize - 1", "(Rear + 1) % MaxSize == Front", "Front == Rear"],
+      "correctAnswerIndex": 2,
+      "difficulty": "medium",
+      "topic": "Data Structures"
+    }
+  ],
+  "hard": [
+    {
+      "questionText": "In an AVL tree, what is the maximum allowed difference in heights between the left and right subtrees of any node?",
+      "options": ["0", "1", "2", "Unlimited"],
+      "correctAnswerIndex": 1,
+      "difficulty": "hard",
+      "topic": "Data Structures"
+    },
+    {
+      "questionText": "Which data structure is most efficient for implementing a priority queue where both insertion and deletion of the minimum element must be fast?",
+      "options": ["Unsorted Array", "Sorted Array", "Binary Heap", "Linked List"],
+      "correctAnswerIndex": 2,
+      "difficulty": "hard",
+      "topic": "Data Structures"
+    }
+  ]
+}

@@ -3,30 +3,32 @@ import { useColorScheme } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const darkColors = {
-    background: '#0F172A',
-    surface: '#1E293B',
-    surfaceHighlight: '#334155',
-    primary: '#6366F1',
-    success: '#22C55E',
+    background: '#0B1220',
+    surface: '#111827',
+    surfaceHighlight: '#1F2937',
+    primary: '#7C3AED',
+    accentSoft: 'rgba(124,58,237,0.25)',
+    success: '#10B981',
     warning: '#F59E0B',
     error: '#EF4444',
-    textPrimary: '#F8FAFC',
-    textSecondary: '#94A3B8',
-    border: '#334155',
+    textPrimary: '#E5E7EB',
+    textSecondary: '#9CA3AF',
+    border: '#1F2937',
 };
 
-// Light mode is kept for compatibility but dark is default
+// Light mode is kept for compatibility
 const lightColors = {
-    background: '#F1F5F9',
+    background: '#F9FAFB',
     surface: '#FFFFFF',
-    surfaceHighlight: '#E2E8F0',
-    primary: '#6366F1',
-    success: '#22C55E',
+    surfaceHighlight: '#F3F4F6',
+    primary: '#7C3AED',
+    accentSoft: 'rgba(124,58,237,0.1)',
+    success: '#10B981',
     warning: '#F59E0B',
     error: '#EF4444',
-    textPrimary: '#0F172A',
-    textSecondary: '#475569',
-    border: '#CBD5E1',
+    textPrimary: '#111827',
+    textSecondary: '#6B7280',
+    border: '#E5E7EB',
 };
 
 const sharedTheme = {
@@ -38,7 +40,7 @@ const sharedTheme = {
         xl: 32,
     },
     borderRadius: {
-        card: 14,
+        card: 16,
         button: 12,
         circle: 100,
     },
@@ -68,19 +70,27 @@ export const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
     const systemColorScheme = useColorScheme();
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const [hapticsEnabled, setHapticsEnabled] = useState(true);
+    const [soundEnabled, setSoundEnabled] = useState(true);
 
     useEffect(() => {
-        const loadTheme = async () => {
+        const loadSettings = async () => {
             try {
-                const savedTheme = await AsyncStorage.getItem('isDarkMode');
-                if (savedTheme !== null) {
-                    setIsDarkMode(JSON.parse(savedTheme));
-                }
+                const results = await AsyncStorage.multiGet(['isDarkMode', 'hapticsEnabled', 'soundEnabled']);
+                
+                results.forEach(([key, value]) => {
+                    if (value !== null) {
+                        const parsedValue = JSON.parse(value);
+                        if (key === 'isDarkMode') setIsDarkMode(parsedValue);
+                        if (key === 'hapticsEnabled') setHapticsEnabled(parsedValue);
+                        if (key === 'soundEnabled') setSoundEnabled(parsedValue);
+                    }
+                });
             } catch (error) {
-                console.error("Error loading theme", error);
+                console.error("Error loading settings", error);
             }
         };
-        loadTheme();
+        loadSettings();
     }, []);
 
     // Default to dark mode, can be switched to light
@@ -91,6 +101,10 @@ export const ThemeProvider = ({ children }) => {
         ...sharedTheme,
         isDarkMode,
         setIsDarkMode,
+        hapticsEnabled,
+        setHapticsEnabled,
+        soundEnabled,
+        setSoundEnabled,
     };
 
     return (

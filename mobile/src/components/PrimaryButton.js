@@ -7,8 +7,8 @@ export default function PrimaryButton({
     children,
     onPress,
     variant = 'gradient',
-    gradientColors = ['#6366F1', '#818CF8'],
-    backgroundColor = '#6366F1',
+    gradientColors = ['#7C3AED', '#9333EA'],
+    backgroundColor = '#7C3AED',
     disabled = false,
     style,
     textStyle,
@@ -22,13 +22,13 @@ export default function PrimaryButton({
             justifyContent: 'center',
             ...Platform.select({
                 ios: {
-                    shadowColor: gradientColors[0] || backgroundColor,
+                    shadowColor: theme.colors.primary,
                     shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.3,
-                    shadowRadius: 8,
+                    shadowOpacity: 0.2,
+                    shadowRadius: 10,
                 },
                 android: {
-                    elevation: 6,
+                    elevation: 4,
                 },
             }),
         },
