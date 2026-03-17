@@ -4,10 +4,10 @@ import { ThemeContext } from '../components/Theme';
 import Card from '../components/Card';
 
 const MOCK_FRIENDS = [
-    { id: '1', username: 'CodeMaster', level: 12, xp: 4500 },
-    { id: '2', username: 'ReactQueen', level: 15, xp: 6200 },
-    { id: '3', username: 'AlgoGuru', level: 8, xp: 2100 },
-    { id: '4', username: 'Pythonista', level: 10, xp: 3400 },
+    { id: '1', username: 'CodeMaster', xp: 4500 },
+    { id: '2', username: 'ReactQueen', xp: 6200 },
+    { id: '3', username: 'AlgoGuru', xp: 2100 },
+    { id: '4', username: 'Pythonista', xp: 3400 },
 ];
 
 export default function FriendsScreen({ navigation }) {
@@ -103,7 +103,7 @@ export default function FriendsScreen({ navigation }) {
             </View>
             <View style={styles.friendInfo}>
                 <Text style={styles.friendName}>{item.username}</Text>
-                <Text style={styles.friendLevel}>Level {item.level} • {item.xp} XP</Text>
+                <Text style={styles.friendLevel}>{item.xp} Points</Text>
             </View>
             <TouchableOpacity style={styles.challengeButton}>
                 <Text style={styles.challengeButtonText}>Invite</Text>

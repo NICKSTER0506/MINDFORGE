@@ -10,20 +10,8 @@ export default function ProfileScreen({ navigation }) {
     const { user, logout } = useContext(AuthContext);
     const theme = useContext(ThemeContext);
 
-    const calculateLevel = (xp) => {
-        let lvl = 1;
-        let reqXp = 300;
-        let currentXp = xp || 0;
-        while (currentXp >= reqXp) {
-            lvl++;
-            currentXp -= reqXp;
-            reqXp = 200 + (lvl * 100);
-        }
-        return { lvl, currentXp, reqXp };
-    };
+    const knowledgePoints = user?.totalXP || 0;
 
-    const { lvl, currentXp, reqXp } = calculateLevel(user?.totalXP);
-    const progressPercent = (currentXp / reqXp) * 100;
 
     const handleLogout = () => {
         logout();
@@ -112,9 +100,8 @@ export default function ProfileScreen({ navigation }) {
             </View>
 
             <Card type="standard" style={{ alignItems: 'center', marginBottom: theme.spacing.xl }}>
-                <Text style={styles.levelText}>Level {lvl}</Text>
-                <ProgressBar percentage={progressPercent} height={6} variant="primary" style={{ marginVertical: theme.spacing.m }} />
-                <Text style={styles.xpText}>{currentXp} / {reqXp} XP</Text>
+                <Text style={styles.levelText}>{knowledgePoints}</Text>
+                <Text style={styles.xpText}>Knowledge Points</Text>
             </Card>
 
             <Card type="standard" style={{ marginBottom: theme.spacing.m }}>

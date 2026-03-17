@@ -30,8 +30,6 @@ router.get('/daily/status', auth, async (req, res) => {
         res.json({
             success: true,
             completedToday,
-            dailyStreak: user.dailyStreak || 0,
-            bestStreak: user.maxDailyStreak || (user.dailyStreak || 0),
             lastResult
         });
     } catch (err) {
@@ -91,21 +89,13 @@ router.get('/:topic', auth, async (req, res) => {
 router.post('/submit', auth, async (req, res) => {
     try {
         const { topic, easyCorrect, mediumCorrect, hardCorrect } = req.body;
-
         const isDaily = topic === 'Daily Challenge';
 
-        // Best attempt logic: calculate XP
-        // Easy=10, Medium=15, Hard=20 (If Daily, 2x XP modifier)
-        let xpEarned = (easyCorrect * 10) + (mediumCorrect * 15) + (hardCorrect * 20);
-        if (isDaily) xpEarned *= 2; // 2X XP for Daily Challenge
-
+        // Standardized XP: Easy=10, Medium=20, Hard=30
+        const xpEarned = (easyCorrect * 10) + (mediumCorrect * 20) + (hardCorrect * 30);
         const correctAnswers = easyCorrect + mediumCorrect + hardCorrect;
 
-        // Find previous best attempt for this topic BEFORE saving the new one
-        const previousBest = await Attempt.findOne({ userId: req.user.userId, topic })
-            .sort({ xpEarned: -1 });
-
-        // Save new attempt history
+        // Save attempt history
         const attempt = new Attempt({
             userId: req.user.userId,
             topic,
@@ -117,68 +107,15 @@ router.post('/submit', auth, async (req, res) => {
         });
         await attempt.save();
 
-        let newTotalXP = 0;
-        let newLevel = 1;
-
-        // Fetch User to update XP
+        // Fetch User to update cumulative Total Score (XP)
         const user = await User.findById(req.user.userId);
         if (!user) return res.status(404).json({ error: 'User not found' });
 
-        let xpToAdd = xpEarned;
-
-        if (isDaily) {
-            // Update daily streak
-            const today = new Date().toISOString().split('T')[0];
-            const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
-
-            if (user.lastDailyPlayDate === yesterday) {
-                user.dailyStreak += 1; // Continuing streak
-            } else if (user.lastDailyPlayDate !== today) {
-                user.dailyStreak = 1; // Reset streak if missed a day
-            }
-
-            // Check if it's a new best streak
-            if (user.dailyStreak > (user.maxDailyStreak || 0)) {
-                user.maxDailyStreak = user.dailyStreak;
-            }
-
-            user.lastDailyPlayDate = today;
-            // For daily, always give full XP earned
-            xpToAdd = xpEarned;
-        } else {
-            // Find previous best attempt for regular topic
-            if (previousBest) {
-                if (xpEarned > previousBest.xpEarned) {
-                    xpToAdd = xpEarned - previousBest.xpEarned;
-                } else {
-                    xpToAdd = 0;
-                }
-            }
-        }
-
-        user.totalXP += xpToAdd;
+        // Simplification: Always add the earned XP to totalXP (cumulative learning)
+        user.totalXP += xpEarned;
         await user.save();
-        newTotalXP = user.totalXP;
 
-        // Calculate new level
-
-        // Level up formula: RequiredXP = 200 + (Level * 100) -> wait, dynamic level calc:
-        // TotalXP = Level 1 (0 to 299), Level 2 (300 to 599)... wait.
-        const calculateLevel = (xp) => {
-            let lvl = 1;
-            let reqXp = 300; // 200 + (1 * 100)
-            let currentXp = xp;
-            while (currentXp >= reqXp) {
-                lvl++;
-                currentXp -= reqXp;
-                reqXp = 200 + (lvl * 100);
-            }
-            return lvl;
-        };
-
-        newLevel = calculateLevel(newTotalXP);
-
-        res.json({ success: true, xpEarned: xpToAdd, newTotalXP, newLevel });
+        res.json({ success: true, xpEarned, newTotalXP: user.totalXP });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Submission failed' });

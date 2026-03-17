@@ -6,7 +6,8 @@ import ConfettiCannon from 'react-native-confetti-cannon';
 
 export default function ResultScreen({ route, navigation }) {
     const { resultData, totalCorrect, totalQuestions, questions, userAnswers } = route.params;
-    const { xpEarned, newTotalXP, newLevel } = resultData;
+    const { xpEarned, newTotalXP } = resultData;
+
     const theme = useContext(ThemeContext);
 
     const scaleAnim = useRef(new Animated.Value(0.8)).current;
@@ -95,7 +96,7 @@ export default function ResultScreen({ route, navigation }) {
                     <View style={styles.divider} />
 
                     <Text style={styles.xpText}>+{xpEarned} XP</Text>
-                    <Text style={styles.levelText}>New Level {newLevel}</Text>
+                    <Text style={styles.levelText}>Total Points: {newTotalXP}</Text>
                 </Card>
             </Animated.View>
 

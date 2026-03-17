@@ -4,7 +4,45 @@ const auth = require('../middleware/authMiddleware');
 const Attempt = require('../models/Attempt');
 const User = require('../models/User');
 
-// Fetch user stats
+// Fetch daily stats (Today's snapshot)
+router.get('/daily-stats', auth, async (req, res) => {
+    try {
+        const userId = req.user.userId;
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+
+        const dailyAttempts = await Attempt.find({
+            userId,
+            completedAt: { $gte: today, $lt: tomorrow }
+        });
+
+        let attemptedToday = 0;
+        let solvedToday = 0;
+
+        dailyAttempts.forEach(attempt => {
+            attemptedToday += (attempt.totalQuestions || 20); // Default fallback if missing
+            solvedToday += attempt.correctAnswers;
+        });
+
+        const accuracyToday = attemptedToday > 0 
+            ? Math.round((solvedToday / attemptedToday) * 100) 
+            : null;
+
+        res.json({
+            success: true,
+            attemptedToday,
+            solvedToday,
+            accuracyToday
+        });
+
+    } catch (err) {
+        console.error("Daily Stats Error:", err);
+        res.status(500).json({ error: 'Failed to fetch daily stats' });
+    }
+});
+
 router.get('/stats', auth, async (req, res) => {
     try {
         const userId = req.user.userId;
@@ -22,10 +60,8 @@ router.get('/stats', auth, async (req, res) => {
                 success: true,
                 overview: {
                     quizzesPlayed: 0,
-                    wins: 0,
                     accuracy: 0,
-                    totalXP: user.totalXP,
-                    bestStreak: 0, // Placeholder for streak logic
+                    totalScore: user.totalXP,
                     averageScore: 0
                 },
                 recentScores: [],
@@ -35,37 +71,16 @@ router.get('/stats', auth, async (req, res) => {
             });
         }
 
-        // Calculate Overview
+        // No streak tracking
         let totalCorrect = 0;
         let totalQuestionsAll = 0;
-        let wins = 0; // Win = > 70%
-        let currentStreak = 0;
-        let maxStreak = 0;
-
-        // Calculate Difficulty
         let diffStats = {
             easy: { correct: 0, total: 0 },
             medium: { correct: 0, total: 0 },
             hard: { correct: 0, total: 0 }
         };
-
-        // Calculate Topic Accuracy
         let topicMap = {};
-
-        // Recent Quizzes (last 5)
         const recentQuizzes = [];
-
-        // Reverse iterate to calculate streak (oldest to newest)
-        const ascendingAttempts = [...allAttempts].reverse();
-        ascendingAttempts.forEach(attempt => {
-            const scorePercent = (attempt.correctAnswers / attempt.totalQuestions) * 100;
-            if (scorePercent >= 70) {
-                currentStreak++;
-                if (currentStreak > maxStreak) maxStreak = currentStreak;
-            } else {
-                currentStreak = 0; // Reset streak
-            }
-        });
 
         // Calculate the rest (Newest to oldest)
         allAttempts.forEach((attempt, index) => {
@@ -73,7 +88,6 @@ router.get('/stats', auth, async (req, res) => {
             totalQuestionsAll += attempt.totalQuestions;
 
             const scorePercent = (attempt.correctAnswers / attempt.totalQuestions) * 100;
-            if (scorePercent >= 70) wins++;
 
             // Recent quizzes list
             if (index < 5) {
@@ -130,13 +144,11 @@ router.get('/stats', auth, async (req, res) => {
             success: true,
             overview: {
                 quizzesPlayed: totalQuizzes,
-                wins,
                 accuracy: overallAccuracy,
-                totalXP: user.totalXP,
-                bestStreak: maxStreak,
-                averageScore: `${averageScore} / 20` // 20 is totalQ
+                totalScore: user.totalXP,
+                averageScore: `${averageScore} / 20`
             },
-            recentScores: recentScores.length > 0 ? recentScores : [0], // Chart needs at least 1 point
+            recentScores: recentScores.length > 0 ? recentScores : [0],
             topicAccuracy,
             difficultyAccuracy,
             recentQuizzes

@@ -111,21 +111,6 @@ export default function StatsScreen() {
             fontSize: 15,
             color: theme.colors.textSecondary,
             fontWeight: '500',
-        },
-        recentIcon: {
-            width: 10,
-            height: 10,
-            borderRadius: 5,
-        },
-        recentTitle: {
-            fontSize: 15,
-            color: theme.colors.textPrimary,
-            fontWeight: '600',
-        },
-        recentScore: {
-            fontSize: 15,
-            color: theme.colors.textSecondary,
-            fontWeight: '500',
         }
     });
 
@@ -175,23 +160,23 @@ export default function StatsScreen() {
 
                 <Text style={styles.headerText}>Statistics</Text>
 
-                {/* SECTION 1: OVERVIEW SETTINGS */}
+                {/* SECTION 1: OVERVIEW METRICS */}
                 <View style={styles.grid}>
                     <Card type="stat">
                         <Text style={styles.statValue}>{overview.quizzesPlayed}</Text>
                         <Text style={styles.statLabel}>Quizzes Played</Text>
                     </Card>
                     <Card type="stat">
-                        <Text style={styles.statValue}>{overview.wins}</Text>
-                        <Text style={styles.statLabel}>Wins</Text>
-                    </Card>
-                    <Card type="stat">
                         <Text style={styles.statValue}>{overview.accuracy}%</Text>
-                        <Text style={styles.statLabel}>Accuracy</Text>
+                        <Text style={styles.statLabel}>Overall Accuracy</Text>
                     </Card>
                     <Card type="stat">
-                        <Text style={styles.statValue}>{overview.bestStreak}</Text>
-                        <Text style={styles.statLabel}>Best Streak</Text>
+                        <Text style={styles.statValue}>{overview.averageScore}</Text>
+                        <Text style={styles.statLabel}>Avg Score</Text>
+                    </Card>
+                    <Card type="stat">
+                        <Text style={styles.statValue}>{overview.totalScore}</Text>
+                        <Text style={styles.statLabel}>Total Score</Text>
                     </Card>
                 </View>
 

@@ -1,39 +1,60 @@
-import React, { useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useContext, useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, RefreshControl } from 'react-native';
 import { ThemeContext } from '../components/Theme';
 import { AuthContext } from '../context/AuthContext';
+import { API_BASE_URL } from '../config/api';
 import PrimaryButton from '../components/PrimaryButton';
 import Card from '../components/Card';
-import ProgressBar from '../components/ProgressBar';
 
 export default function HomeScreen({ navigation }) {
-    const { user } = useContext(AuthContext);
+    const { user, token } = useContext(AuthContext);
     const theme = useContext(ThemeContext);
 
-    // Dummy level calc
-    const calculateLevel = (xp) => {
-        let lvl = 1;
-        let reqXp = 300;
-        let currentXp = xp || 0;
-        while (currentXp >= reqXp) {
-            lvl++;
-            currentXp -= reqXp;
-            reqXp = 200 + (lvl * 100);
+    const [dailyStats, setDailyStats] = useState({
+        attemptedToday: 0,
+        solvedToday: 0,
+        accuracyToday: null
+    });
+    const [refreshing, setRefreshing] = useState(false);
+
+    const fetchDailyStats = async () => {
+        try {
+            const res = await fetch(`${API_BASE_URL}/api/user/daily-stats`, {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            const data = await res.json();
+            if (data.success) {
+                setDailyStats({
+                    attemptedToday: data.attemptedToday,
+                    solvedToday: data.solvedToday,
+                    accuracyToday: data.accuracyToday
+                });
+            }
+        } catch (err) {
+            console.error('Error fetching daily stats:', err);
         }
-        return { lvl, currentXp, reqXp };
     };
 
-    const { lvl, currentXp, reqXp } = calculateLevel(user?.totalXP);
-    const progressPercent = Math.min((currentXp / reqXp) * 100, 100);
+    useEffect(() => {
+        if (token) fetchDailyStats();
+    }, [token]);
+
+    const onRefresh = async () => {
+        setRefreshing(true);
+        await fetchDailyStats();
+        setRefreshing(false);
+    };
 
     const styles = StyleSheet.create({
         container: {
             flex: 1,
             backgroundColor: theme.colors.background,
+        },
+        scrollContent: {
             paddingHorizontal: theme.spacing.l,
             paddingTop: 60,
             paddingBottom: 40,
-            justifyContent: 'space-between',
+            flexGrow: 1,
         },
         header: {
             flexDirection: 'row',
@@ -65,49 +86,74 @@ export default function HomeScreen({ navigation }) {
             fontWeight: 'bold',
             fontSize: 20,
         },
-        topSection: {
-            marginBottom: 40,
-        },
-        levelHeader: {
+        statsRow: {
             flexDirection: 'row',
             justifyContent: 'space-between',
-            alignItems: 'flex-end',
-            marginBottom: theme.spacing.s,
+            marginBottom: theme.spacing.xl,
+            gap: theme.spacing.s,
         },
-        levelText: {
-            ...theme.typography.h1,
-            color: theme.colors.textPrimary,
+        statCard: {
+            flex: 1,
+            backgroundColor: theme.colors.surfaceHighlight,
+            borderRadius: theme.borderRadius.card,
+            padding: theme.spacing.m,
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderWidth: 1,
+            borderColor: theme.colors.border,
+            // Subtle shadow/glow
+            shadowColor: theme.colors.primary,
+            shadowOffset: { width: 0, height: 2 },
+            shadowOpacity: 0.1,
+            shadowRadius: 4,
+            elevation: 2,
         },
-        xpText: {
-            ...theme.typography.label,
+        statLabel: {
+            ...theme.typography.caption,
             color: theme.colors.textSecondary,
-            fontWeight: '600',
+            textAlign: 'center',
+            marginBottom: 4,
+            fontSize: 10,
+            textTransform: 'uppercase',
+            letterSpacing: 0.5,
+        },
+        statValue: {
+            ...theme.typography.h3,
+            color: theme.colors.textPrimary,
+            fontWeight: 'bold',
         },
         centerSection: {
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
+            marginVertical: theme.spacing.xl,
             gap: theme.spacing.m,
         },
         cardGrid: {
             flexDirection: 'row',
             justifyContent: 'space-between',
             gap: theme.spacing.m,
+            marginBottom: theme.spacing.m,
         },
-        cardContent: {
+        secondaryCard: {
             flex: 1,
         },
         cardTitle: {
             ...theme.typography.h3,
             color: theme.colors.textPrimary,
             marginBottom: theme.spacing.xs,
+            fontSize: 18,
         },
         cardSubtitle: {
             ...theme.typography.body,
             color: theme.colors.textSecondary,
+            fontSize: 13,
         },
-        bottomButton: {
-            marginTop: theme.spacing.s,
+        statsButtonCard: {
+            backgroundColor: theme.colors.surface,
+            padding: theme.spacing.m,
+            borderRadius: theme.borderRadius.button,
+            alignItems: 'center',
+            borderWidth: 1,
+            borderColor: theme.colors.border,
+            marginTop: 'auto',
         },
         statsButtonText: {
             ...theme.typography.body,
@@ -118,99 +164,107 @@ export default function HomeScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            {/* HEADER */}
-            <View style={styles.header}>
-                <View style={styles.greeting}>
-                    <Text style={styles.greetingText}>
-                        Welcome, {user?.username || 'User'}
-                    </Text>
-                    <Text style={styles.greetingSubtext}>
-                        Ready to learn something new?
-                    </Text>
+            <ScrollView 
+                contentContainerStyle={styles.scrollContent}
+                refreshControl={
+                    <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={theme.colors.primary} />
+                }
+                showsVerticalScrollIndicator={false}
+            >
+                {/* HEADER */}
+                <View style={styles.header}>
+                    <View style={styles.greeting}>
+                        <Text style={styles.greetingText}>
+                            Welcome, {user?.username || 'User'}
+                        </Text>
+                        <Text style={styles.greetingSubtext}>
+                            Ready to learn something new?
+                        </Text>
+                    </View>
+                    <TouchableOpacity
+                        style={styles.profileIcon}
+                        onPress={() => navigation.navigate('Profile')}
+                    >
+                        <Text style={styles.profileIconText}>
+                            {user?.username?.charAt(0).toUpperCase() || '👤'}
+                        </Text>
+                    </TouchableOpacity>
                 </View>
-                <TouchableOpacity
-                    style={styles.profileIcon}
-                    onPress={() => navigation.navigate('Profile')}
-                >
-                    <Text style={styles.profileIconText}>
-                        {user?.username?.charAt(0).toUpperCase() || '👤'}
-                    </Text>
-                </TouchableOpacity>
-            </View>
 
-            {/* XP SECTION */}
-            <View style={styles.topSection}>
-                <View style={styles.levelHeader}>
-                    <Text style={styles.levelText}>Level {lvl}</Text>
-                    <Text style={styles.xpText}>{currentXp} / {reqXp} XP</Text>
+                {/* DAILY STATS ROW */}
+                <View style={styles.statsRow}>
+                    <View style={styles.statCard}>
+                        <Text style={styles.statLabel}>Attempted Today</Text>
+                        <Text style={styles.statValue}>{dailyStats.attemptedToday}</Text>
+                    </View>
+                    <View style={styles.statCard}>
+                        <Text style={styles.statLabel}>Solved Today</Text>
+                        <Text style={styles.statValue}>{dailyStats.solvedToday}</Text>
+                    </View>
+                    <View style={styles.statCard}>
+                        <Text style={styles.statLabel}>Accuracy Today</Text>
+                        <Text style={styles.statValue}>
+                            {dailyStats.accuracyToday !== null ? `${dailyStats.accuracyToday}%` : '—'}
+                        </Text>
+                    </View>
                 </View>
-                <ProgressBar
-                    percentage={progressPercent}
-                    variant="primary"
-                />
-            </View>
 
-            {/* CENTER SECTION */}
-            <View style={styles.centerSection}>
-                <PrimaryButton
-                    variant="gradient"
-                    gradientColors={['#EF4444', '#B91C1C']}
-                    onPress={() => navigation.navigate('DailyChallenge')}
-                    style={{ width: '100%' }}
-                >
-                    🔥 Daily Challenge (2x XP)
-                </PrimaryButton>
+                {/* MAIN ACTIONS */}
+                <View style={styles.centerSection}>
+                    <PrimaryButton
+                        variant="gradient"
+                        gradientColors={['#EF4444', '#B91C1C']}
+                        onPress={() => navigation.navigate('DailyChallenge')}
+                        style={{ width: '100%' }}
+                    >
+                        Practice Daily
+                    </PrimaryButton>
 
-                <PrimaryButton
-                    variant="gradient"
-                    gradientColors={['#7C3AED', '#9333EA']}
-                    onPress={() => navigation.navigate('TopicSelection')}
-                    style={{ width: '100%' }}
-                >
-                    Practice by Topic
-                </PrimaryButton>
-            </View>
+                    <PrimaryButton
+                        variant="gradient"
+                        gradientColors={['#7C3AED', '#9333EA']}
+                        onPress={() => navigation.navigate('TopicSelection')}
+                        style={{ width: '100%' }}
+                    >
+                        Practice by Topic
+                    </PrimaryButton>
+                </View>
 
-            {/* LOWER SECTION */}
-            <View style={{ gap: theme.spacing.m }}>
+                {/* SECONDARY FEATURES */}
                 <View style={styles.cardGrid}>
                     <TouchableOpacity
-                        style={[styles.cardContent, { flex: 1 }]}
+                        style={styles.secondaryCard}
                         activeOpacity={0.7}
                         onPress={() => navigation.navigate('Leaderboard')}
                     >
-                        <Card type="standard" width="100%">
+                        <Card type="standard" width="100%" padding="m">
                             <Text style={styles.cardTitle}>Leaderboard</Text>
                             <Text style={styles.cardSubtitle}>See where you rank globally</Text>
                         </Card>
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={[styles.cardContent, { flex: 1 }]}
+                        style={styles.secondaryCard}
                         activeOpacity={0.7}
                         onPress={() => navigation.navigate('Profile')}
                     >
-                        <Card type="standard" width="100%">
+                        <Card type="standard" width="100%" padding="m">
                             <Text style={styles.cardTitle}>Profile</Text>
                             <Text style={styles.cardSubtitle}>Settings & Logout</Text>
                         </Card>
                     </TouchableOpacity>
                 </View>
 
+                <View style={{ height: 20 }} />
+
+                {/* STATISTICS ACCESS */}
                 <TouchableOpacity
-                    style={{
-                        backgroundColor: theme.colors.surface,
-                        padding: theme.spacing.m,
-                        borderRadius: theme.borderRadius.button,
-                        alignItems: 'center',
-                        borderWidth: 1,
-                        borderColor: theme.colors.border,
-                    }}
+                    style={styles.statsButtonCard}
                     onPress={() => navigation.navigate('Stats')}
                 >
                     <Text style={styles.statsButtonText}>View My Statistics</Text>
                 </TouchableOpacity>
-            </View>
+            </ScrollView>
         </View>
     );
 }
